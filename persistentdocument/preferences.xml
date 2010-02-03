@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://www.rbs.fr/schema/change-document/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.rbs.fr/schema/change-document/1.0 http://www.rbschange.fr/static/schema/change-document/1.0.xsd"
+	model-version="1.0" icon="videos" publish-on-day-change="false" 
+	backoffice-indexable="false" has-url="false">
+	<properties>
+		<add name="label" default-value="preferences" />
+		<add name="width" type="String" min-occurs="1" default-value="320">
+			<constraints>integer:true</constraints>
+		</add>
+		<add name="height" type="String" min-occurs="1" default-value="240">
+			<constraints>integer:true</constraints>
+		</add>
+		<add name="autostart" type="String" min-occurs="1" from-list="modules_videos/truefalse" default-value="false" />
+		<add name="repeat" type="Boolean" />
+
+		<!-- Colors -->
+		<add name="backcolor" type="String" />
+		<add name="frontcolor" type="String" />
+		<add name="lightcolor" type="String" />
+		<add name="screencolor" type="String" />
+
+		<!-- Display appearance -->
+		<add name="logo" type="modules_media/media" />
+		<add name="image" type="modules_media/media" />
+		<add name="icons" type="String" min-occurs="1" from-list="modules_videos/truefalse" default-value="true" />
+		<add name="controlbar" type="String" min-occurs="1" from-list="modules_videos/controlbar" default-value="bottom" />
+		<add name="usefullscreen" type="String" min-occurs="1" from-list="modules_videos/truefalse" default-value="true" />
+
+		<!-- Dailymotion properties -->
+		<add name="dailyWidth" type="String" min-occurs="1" default-value="480">
+			<constraints>integer:true</constraints>
+		</add>
+		<add name="dailyHeight" type="String" min-occurs="1" default-value="414">
+			<constraints>integer:true</constraints>
+		</add>
+		<add name="background" type="String" default-value="#DEDEDE"/>
+		<add name="glow" type="String" default-value="#FFFFFF"/>
+		<add name="foreground" type="String" default-value="#333333"/>
+		<add name="special" type="String" default-value="#FFC300"/>
+		<add name="dailyAutoPlay" type="Boolean" default-value="false" />
+
+		<!-- YouTube properties -->
+		<add name="youtubeWidth" type="String" min-occurs="1" default-value="480">
+			<constraints>integer:true</constraints>
+		</add>
+		<add name="youtubeHeight" type="String" min-occurs="1" default-value="385">
+			<constraints>integer:true</constraints>
+		</add>
+		<add name="color1" type="String" />
+		<add name="color2" type="String" />
+		<add name="fs" type="Boolean" default-value="true" />
+		<add name="border" type="Boolean" default-value="false" />
+		<add name="youtubeAutoPlay" type="Boolean" default-value="false" />
+	</properties>	
+	<statuses default="PUBLICATED" />
+</document>

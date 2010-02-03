@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+	<entity id="edition-form-title">
+		<locale lang="fr">propriétés d'une vidéo YouTube</locale>
+		<locale lang="en">YouTube video properties</locale>
+	</entity>
+	<entity id="label">
+		<locale lang="fr">libellé</locale>
+		<locale lang="en">label</locale>
+	</entity>
+	<entity id="label-help">
+		<locale lang="fr">libellé</locale>
+		<locale lang="en">label</locale>
+	</entity>
+	<entity id="videoid">
+		<locale lang="fr">identifiant de la vidéo</locale>
+		<locale lang="en">video id</locale>
+	</entity>
+	<entity id="videoid-help">
+		<locale lang="fr">ex: IpQ9RESJnWM</locale>
+		<locale lang="en">ex: IpQ9RESJnWM</locale>
+	</entity>
+	
+	<entity id="exctract-id">
+		<locale lang="fr">extraire l'identifiant de l'URL</locale>
+	</entity>
+	<entity id="set-permalink">
+		<locale lang="fr">Saisissez l'URL de la vidéo. Celle-ci peut être récupérée sur la page de la vidéo sur YouTube.</locale>
+	</entity>
+	<entity id="bad-link">
+		<locale lang="fr">Le lien que vous venez de saisir n'est pas valide.</locale>
+	</entity>
+</localization>

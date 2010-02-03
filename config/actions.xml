@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<actions extends="generic">
+	<action name="createVideo">
+		<parameter name="listWidget" />
+		<body><![CDATA[
+			this.createDocumentEditor('modules_videos_video', listWidget.getSelectedItems()[0].id);
+		]]></body>
+	</action>
+	<action name="createPlaylist">
+		<parameter name="listWidget" />
+		<body><![CDATA[
+			this.createDocumentEditor('modules_videos_playlist', listWidget.getSelectedItems()[0].id);
+		]]></body>
+	</action>
+	<action name="createDailymotionvideo">
+		<parameter name="listWidget" />
+		<body><![CDATA[
+			this.createDocumentEditor('modules_videos_dailymotionvideo', listWidget.getSelectedItems()[0].id);
+		]]></body>
+	</action>
+	<action name="createYoutubevideo">
+		<parameter name="listWidget" />
+		<body><![CDATA[
+			this.createDocumentEditor('modules_videos_youtubevideo', listWidget.getSelectedItems()[0].id);
+		]]></body>
+	</action>
+	<action name="createFolder">
+		<parameter name="listWidget" />
+		<body><![CDATA[
+			this.createDocumentEditor('modules_media_folder', listWidget.getSelectedItems()[0].id);
+		]]></body>
+	</action>
+</actions>

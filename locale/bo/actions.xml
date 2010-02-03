@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <entity id="create_">
+    <locale lang="fr">créer...</locale>
+    <locale lang="en">create...</locale>
+  </entity>
+  <entity id="create-video">
+    <locale lang="fr">créer une vidéo</locale>
+    <locale lang="en">create video</locale>
+    <locale lang="de">neues Video erstellen</locale>
+  </entity>
+  <entity id="preview">
+    <locale lang="fr">prévisualiser la vidéo</locale>
+    <locale lang="en">video preview</locale>
+    <locale lang="de">Videovorschau</locale>
+  </entity>
+  <entity id="create-playlist">
+    <locale lang="fr">créer une playlist</locale>
+    <locale lang="en">create playlist</locale>
+  </entity>
+  <entity id="create-dailymotionvideo">
+    <locale lang="fr">créer une vidéo dailymotion</locale>
+    <locale lang="en">create dailymotion video</locale>
+  </entity>
+  <entity id="create-youtubevideo">
+    <locale lang="fr">créer une vidéo youtube</locale>
+    <locale lang="en">create youtube video</locale>
+  </entity>
+</localization>

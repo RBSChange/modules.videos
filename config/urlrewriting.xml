@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlrewriting>
+	<rules>
+		<rule documentModel="video" viewMode="detail">
+			<template>/video/$label,$id.$extension/</template>
+		</rule>
+		<rule documentModel="dailymotionvideo" viewMode="detail">
+			<template>/video/$label,$id.$extension/</template>
+		</rule>
+		<rule documentModel="youtubevideo" viewMode="detail">
+			<template>/video/$label,$id.$extension/</template>
+		</rule>
+		<rule redirection="videos/Playlist">
+			<template>/playlist/$cmpref.xml</template>
+			<parameters>
+				<parameter name="cmpref" format="[0-9]+"  />
+			</parameters>
+		</rule>
+	</rules>
+</urlrewriting>

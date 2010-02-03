@@ -1,0 +1,9 @@
+cfield[fieldtype="youtubevideoid"]{
+	-moz-binding: url(binding:modules.videos.cVideoEditor#);
+}
+cfield[fieldtype="dailymotionvideoid"]{
+	-moz-binding: url(binding:modules.videos.cVideoEditor#cDailymotionVideoId);
+}
+cproperty[type="video"]{
+	-moz-binding: url(binding:modules.videos.cVideoEditor#cVideoProperty);
+}

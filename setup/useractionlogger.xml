@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+  <binding fileName="modules/useractionlogger/persistentdocument/import/useractionlogger_binding.xml"/>
+  <actiondef modulename="videos" actionname="insert.youtubevideo" label="modules.videos.bo.useractionlogger.insert-youtubevideo"/>
+  <actiondef modulename="videos" actionname="insert.video" label="modules.videos.bo.useractionlogger.insert-video"/>
+  <actiondef modulename="videos" actionname="activate.dailymotionvideo" label="modules.videos.bo.useractionlogger.activate-dailymotionvideo"/>
+  <actiondef modulename="videos" actionname="activate.video" label="modules.videos.bo.useractionlogger.activate-video"/>
+  <actiondef modulename="videos" actionname="activate.youtubevideo" label="modules.videos.bo.useractionlogger.activate-youtubevideo"/>
+  <actiondef modulename="videos" actionname="insert.playlist" label="modules.videos.bo.useractionlogger.insert-playlist"/>
+  <actiondef modulename="videos" actionname="activate.playlist" label="modules.videos.bo.useractionlogger.activate-playlist"/>
+  <actiondef modulename="videos" actionname="insert.folder" label="modules.videos.bo.useractionlogger.insert-folder"/>
+</script>

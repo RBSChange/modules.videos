@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/generic/persistentdocument/import/generic_binding.xml" />
+	<binding name="preferences" className="videos_PreferencesScriptDocumentElement" />
+	<binding name="videospreferences" className="videos_PreferencesScriptDocumentElement" />
+	<binding name="video" className="videos_VideoScriptDocumentElement" />
+	<binding name="dailymotionvideo" className="videos_DailymotionvideoScriptDocumentElement" />
+	<binding name="playlist" className="videos_PlaylistScriptDocumentElement" />
+	<binding name="youtubevideo" className="videos_YoutubevideoScriptDocumentElement" />
+</script>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+	<entity id="edition-form-title">
+		<locale lang="fr">propriétés de la playlist</locale>
+		<locale lang="en">playlist properties</locale>
+	</entity>
+	<entity id="label">
+		<locale lang="fr">label</locale>
+		<locale lang="en">label</locale>
+	</entity>
+	<entity id="label-help">
+		<locale lang="fr">label-help</locale>
+		<locale lang="en">label-help</locale>
+	</entity>
+	<entity id="video">
+		<locale lang="fr">videos</locale>
+		<locale lang="en">videos</locale>
+	</entity>
+	<entity id="video-help">
+		<locale lang="fr">glisser ici des vidéos constituant la playlist.</locale>
+	</entity>
+	<entity id="position">
+		<locale lang="fr">position de la liste</locale>
+		<locale lang="en">list position</locale>
+	</entity>
+	<entity id="position-help">
+		<locale lang="fr">position de la liste des vidéos :
+ - Aléatoire : une vidéo de la liste est sélectionnée aléatoirement.
+ - Bas : la liste des vidéos est proposée en dessous de la zone de visualisation.
+ - Droite : la liste des vidéos est proposée à droite de la zone de visualisation.
+ - Par-dessus : lorsqu'aucune vidéo n'est en cours de lecture, la liste des vidéos remplace la zone de visualisation.</locale>
+	</entity>
+</localization>

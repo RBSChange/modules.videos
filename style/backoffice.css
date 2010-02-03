@@ -1,0 +1,15 @@
+treechildren::-moz-tree-image(modules_videos_video){
+	list-style-image: url(/icons/small/video.png) ;
+}
+treechildren::-moz-tree-image(modules_videos_preferences){
+	list-style-image: url(/icons/small/film.png) ;
+}
+treechildren::-moz-tree-image(modules_videos_playlist){
+	list-style-image: url(/icons/small/video-playlist.png) ;
+}
+treechildren::-moz-tree-image(modules_videos_dailymotionvideo){
+	list-style-image: url(/icons/small/dailymotionvideo.png) ;
+}
+treechildren::-moz-tree-image(modules_videos_youtubevideo){
+	list-style-image: url(/icons/small/youtubevideo.png) ;
+}

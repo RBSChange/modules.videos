@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
+	<binding fileName="modules/videos/persistentdocument/import/videos_binding.xml" />
+
+	<systemfolder module="list" relatedmodule="videos">
+		<staticlist listid="modules_videos/overstretch" label="&amp;modules.videos.document.video.overstretch;" description="&amp;modules.videos.document.video.overstretch;">
+			<staticitem label="&amp;modules.videos.bo.general.false;" value="false" />
+			<staticitem label="&amp;modules.videos.bo.general.true;" value="true" />
+			<staticitem label="&amp;modules.videos.bo.general.fit;" value="fit" />
+			<staticitem label="&amp;modules.videos.bo.general.none;" value="none" />
+		</staticlist>
+
+		<staticlist listid="modules_videos/truefalse" label="&amp;modules.videos.bo.general.truefalse;" description="&amp;modules.videos.bo.general.truefalse;">
+			<staticitem label="&amp;modules.videos.bo.general.false;" value="false" />
+			<staticitem label="&amp;modules.videos.bo.general.true;" value="true" />
+		</staticlist>
+		
+		<staticlist listid="modules_videos/playlistposition" label="&amp;modules.videos.bo.general.Playlist-position;" description="&amp;modules.videos.bo.general.Playlist-position;">
+			<staticitem label="&amp;modules.videos.bo.general.Playlist-none;" value="none" />
+			<staticitem label="&amp;modules.videos.bo.general.Playlist-bottom;" value="bottom" />
+			<staticitem label="&amp;modules.videos.bo.general.Playlist-right;" value="right" />
+			<staticitem label="&amp;modules.videos.bo.general.Playlist-over;" value="over" />
+		</staticlist>
+		
+		<staticlist listid="modules_videos/controlbar" label="&amp;modules.videos.bo.general.Control-bar;" description="&amp;modules.videos.bo.general.Control-bar;">
+			<staticitem label="&amp;modules.videos.bo.general.Video-bottom;" value="bottom" />
+			<staticitem label="&amp;modules.videos.bo.general.Video-over;" value="over" />
+			<staticitem label="&amp;modules.videos.bo.general.Video-none;" value="none" />
+		</staticlist>
+	</systemfolder>
+	
+	<rootfolder module="preferences">
+		<videospreferences />
+	</rootfolder>
+</script>

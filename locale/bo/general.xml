@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <entity id="module-name">
+    <locale lang="fr">vidéos</locale>
+    <locale lang="en">videos</locale>
+    <locale lang="de">Videos</locale>
+  </entity>
+  <entity id="tree-root-name">
+    <locale lang="fr">vidéos</locale>
+    <locale lang="en">videos</locale>
+    <locale lang="de">Videos</locale>
+  </entity>
+  <entity id="system-folder-name">
+    <locale lang="fr">vidéos</locale>
+    <locale lang="en">videos</locale>
+    <locale lang="de">Videos</locale>
+  </entity>
+  <entity id="false">
+    <locale lang="fr">non</locale>
+    <locale lang="en">no</locale>
+    <locale lang="de">NEIN</locale>
+  </entity>
+  <entity id="true">
+    <locale lang="fr">oui</locale>
+    <locale lang="en">yes</locale>
+    <locale lang="de">JA</locale>
+  </entity>
+  <entity id="none">
+    <locale lang="fr">centrer</locale>
+    <locale lang="en">center</locale>
+    <locale lang="de">zentrieren</locale>
+  </entity>
+  <entity id="fit">
+    <locale lang="fr">étirer</locale>
+    <locale lang="en">fit</locale>
+    <locale lang="de">bearbeiten</locale>
+  </entity>
+  <entity id="video-detail">
+    <locale lang="fr">détail d'une vidéo</locale>
+    <locale lang="en">video detail</locale>
+  </entity>
+  <entity id="playlist-detail">
+    <locale lang="fr">détail d'une playlist</locale>
+    <locale lang="en">playlist detail</locale>
+  </entity>
+  <entity id="tag.detail">
+    <locale lang="fr">page détail d'une vidéo</locale>
+    <locale lang="en">video page detail</locale>
+    <locale lang="de">Detailseite eines Video</locale>
+  </entity>
+  <entity id="technical-information">
+    <locale lang="fr">informations techniques</locale>
+    <locale lang="en">technical informations</locale>
+    <locale lang="de">technische Informationen</locale>
+  </entity>
+  <entity id="extra-information">
+    <locale lang="fr">prévisualisation</locale>
+    <locale lang="en">preview</locale>
+    <locale lang="de">Vorschau</locale>
+  </entity>
+  <entity id="general">
+    <locale lang="fr">général</locale>
+    <locale lang="en">main</locale>
+    <locale lang="de">allgemein</locale>
+  </entity>
+  <entity id="playlist-none">
+    <locale lang="fr">aléatoire</locale>
+    <locale lang="en">none</locale>
+  </entity>
+  <entity id="playlist-right">
+    <locale lang="fr">droite</locale>
+    <locale lang="en">right</locale>
+  </entity>
+  <entity id="playlist-over">
+    <locale lang="fr">par-dessus</locale>
+    <locale lang="en">over</locale>
+  </entity>
+  <entity id="playlist-bottom">
+    <locale lang="fr">bas</locale>
+    <locale lang="en">bottom</locale>
+  </entity>
+  <entity id="video-bottom">
+    <locale lang="fr">bas</locale>
+    <locale lang="en">bottom</locale>
+  </entity>
+  <entity id="video-over">
+    <locale lang="fr">par-dessus</locale>
+    <locale lang="en">over</locale>
+  </entity>
+  <entity id="video-none">
+    <locale lang="fr">non</locale>
+    <locale lang="en">none</locale>
+  </entity>
+  <entity id="video-always">
+    <locale lang="fr">oui</locale>
+    <locale lang="en">always</locale>
+  </entity>
+  <entity id="playlist-position">
+    <locale lang="fr">affichage de la liste dans les playlists</locale>
+    <locale lang="en">list display in playlists</locale>
+  </entity>
+  <entity id="control-bar">
+    <locale lang="fr">affichage de la barre de contrôle</locale>
+    <locale lang="en">control bar display</locale>
+  </entity>
+  <entity id="column.filesize">
+    <locale lang="fr">taille de la vidéo</locale>
+    <locale lang="en">video file size</locale>
+  </entity>
+</localization>

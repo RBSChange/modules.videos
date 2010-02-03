@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <entity id="general">
+    <locale lang="fr">général</locale>
+    <locale lang="en">main</locale>
+    <locale lang="de">Allgemein</locale>
+  </entity>
+  <entity id="colors">
+    <locale lang="fr">couleurs</locale>
+    <locale lang="en">colors</locale>
+    <locale lang="de">Farben</locale>
+  </entity>
+  <entity id="display-appearance">
+    <locale lang="fr">apparence</locale>
+    <locale lang="en">appearance</locale>
+    <locale lang="de">Erscheinung</locale>
+  </entity>
+  <entity id="dailymotion">
+    <locale lang="fr">Dailymotion</locale>
+    <locale lang="en">Dailymotion</locale>
+  </entity>
+  <entity id="youtube">
+    <locale lang="fr">YouTube</locale>
+    <locale lang="en">YouTube</locale>
+  </entity>
+</localization>

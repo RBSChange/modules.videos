@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<bindings xmlns="http://www.mozilla.org/xbl" xmlns:xbl="http://www.mozilla.org/xbl" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+
+	<binding id="cYoutubeVideoId" extends="form.cField#cTextField">
+		<content>
+			<children />
+			<xul:vbox>
+				<xul:hbox xbl:inherits="context,spellcheck" flex="1">
+					<xul:textbox anonid="internalcontrol" size="50" maxlength="255" xbl:inherits="maxlength,disabled,size,tabindex,accesskey"/>
+					<xul:toolbar>
+						<xul:toolbarbutton image="chrome://global/skin/icons/question-16.png" xbl:inherits="hidden=hidehelp" 
+							oncommand="dispatchFieldEvent('fieldHelp');"/>
+					</xul:toolbar>
+				</xul:hbox>
+				<xul:hbox>
+					<xul:button label="&amp;modules.videos.document.youtubevideo.Exctract-idEllipsis;" oncommand="extractPermalink()" image="{HttpHost}/icons/small/funnel.png" />
+					<xul:spacer flex="1" />
+				</xul:hbox>
+			</xul:vbox>
+		</content>
+		<implementation>
+			<field name="promptLabel">"&amp;modules.videos.document.youtubevideo.Set-permalink;"</field>
+			<method name="extractPermalink">
+				<body><![CDATA[
+					var permaLink = prompt(this.promptLabel);
+					if (!permaLink)
+					{	
+							return;
+					}
+					else
+					{
+						this.extract(permaLink);
+					}
+						
+				]]></body>
+			</method>
+			<method name="extract">
+				<parameter name="permaLink" />
+				<body><![CDATA[
+					var matches = permaLink.match(/(\?|&)v=([a-z0-9]+)($|&)/i);
+					if (matches !== null && matches.length >= 4)
+					{
+						this.value = matches[2];
+					}
+					else
+					{
+						alert("&modules.videos.document.youtubevideo.Bad-link;");
+					}	
+				]]></body>
+			</method>
+		</implementation>
+	</binding>
+	
+	<binding id="cDailymotionVideoId" extends="modules.videos.cVideoEditor#cYoutubeVideoId">
+		<implementation>
+			<field name="promptLabel">"&amp;modules.videos.document.dailymotionvideo.Set-permalink;"</field>
+			<method name="extract">
+				<parameter name="permaLink" />
+				<body><![CDATA[
+						var matches = permaLink.match(/video\/([a-z0-9]+)_/i);
+						if (matches !== null && matches.length >= 2)
+						{
+							this.value = matches[1];
+						}
+						else
+						{
+							alert("&modules.videos.document.dailymotionvideo.Bad-link;");
+						}	
+				]]></body>
+			</method>
+		</implementation>
+	</binding>
+</bindings>

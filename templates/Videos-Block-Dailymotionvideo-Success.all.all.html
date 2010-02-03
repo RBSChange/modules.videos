@@ -1,0 +1,6 @@
+<object type="application/x-shockwave-flash" tal:attributes="width video/getWidth; height video/getHeight; data video/getUrl">
+	<param name="movie" tal:attributes="value video/getUrl"></param>
+	<param name="allowFullScreen" value="true"></param>
+	<param name="allowScriptAccess" value="always"></param>
+	<embed tal:attributes="src video/getUrl; width video/getWidth; height video/getHeight" type="application/x-shockwave-flash" allowFullScreen="true" allowScriptAccess="always"></embed>
+</object>

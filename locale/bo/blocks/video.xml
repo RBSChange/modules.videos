@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <entity id="width">
+    <locale lang="fr">largeur du lecteur</locale>
+    <locale lang="en">player width</locale>
+    <locale lang="de">Breite des Lesegeräts</locale>
+  </entity>
+  <entity id="height">
+    <locale lang="fr">hauteur du lecteur</locale>
+    <locale lang="en">player height</locale>
+    <locale lang="de">Höhe des Lesegeräts</locale>
+  </entity>
+  <entity id="logo">
+    <locale lang="fr">logo</locale>
+    <locale lang="en">logo</locale>
+    <locale lang="de">Logo</locale>
+  </entity>
+  <entity id="icons">
+    <locale lang="fr">montrer icône de lecture</locale>
+    <locale lang="en">show play icon</locale>
+  </entity>
+  <entity id="controlbar">
+    <locale lang="fr">barre de contrôle</locale>
+    <locale lang="en">show controls</locale>
+  </entity>
+  <entity id="usefullscreen">
+    <locale lang="fr">permettre l'affichage en plein écran</locale>
+    <locale lang="en">full screen</locale>
+    <locale lang="de">Knopf ganzer Bildschirm</locale>
+  </entity>
+  <entity id="autostart">
+    <locale lang="fr">démarrage automatique</locale>
+    <locale lang="en">autostart</locale>
+    <locale lang="de">Autostart</locale>
+  </entity>
+  <entity id="repeat">
+    <locale lang="fr">répéter</locale>
+    <locale lang="en">repeat</locale>
+    <locale lang="de">Wiederholen</locale>
+  </entity>
+</localization>

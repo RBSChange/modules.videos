@@ -1,0 +1,28 @@
+<object	type="application/x-shockwave-flash"
+		id="video_${video/getId}"
+		tal:attributes="	data player/getPlayerUrl;
+							width player/getWidth;
+							height player/getHeight">
+
+	<param name="quality" value="high" />
+	<param name="allowScriptAccess" value="always" />
+
+	<param name="movie" tal:attributes="value player/getPlayerUrl" />
+	<param name="bgcolor" tal:attributes="value player/getCleanBackColor" />
+	<param name="allowFullScreen" tal:attributes="value player/getUsefullscreen" />
+	<param name="wmode" value="transparent" />
+
+	<param name="FlashVars" tal:attributes="value player/getFlashvars" />
+
+	<embed type="application/x-shockwave-flash"
+			pluginspage="http://www.macromedia.com/go/getflashplayer"
+			wmode="transparent"
+			id="video_${video/getId}"
+			tal:attributes="	width player/getWidth;
+								height player/getHeight;
+								bgcolor player/getCleanBackColor;
+								name video/getLabel;
+								src player/getPlayerUrl;
+								allowFullScreen player/getUsefullscreen;
+								flashvars player/getFlashvars" />
+</object>
