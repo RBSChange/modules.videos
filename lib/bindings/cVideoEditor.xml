@@ -14,7 +14,7 @@
 					</xul:toolbar>
 				</xul:hbox>
 				<xul:hbox>
-					<xul:button label="&amp;modules.videos.document.youtubevideo.Exctract-idEllipsis;" oncommand="extractPermalink()" image="{HttpHost}/icons/small/funnel.png" />
+					<xul:button label="&amp;modules.videos.document.youtubevideo.Exctract-idEllipsis;" oncommand="extractPermalink()" image="{IconsBase}/small/funnel.png" />
 					<xul:spacer flex="1" />
 				</xul:hbox>
 			</xul:vbox>

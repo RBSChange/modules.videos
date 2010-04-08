@@ -37,8 +37,9 @@ class videos_Setup extends object_InitDataSetup
 
 	private function importPlayer()
 	{
-		$playerPath = FileResolver::getInstance()->setPackageName('modules_videos')->setDirectory('player')->getPath('jwplayer.swf');
-
-		exec('cp "'.$playerPath.'" "'.WEBAPP_HOME.'/media/frontoffice/jwplayer.swf"');
+		$playerPath = FileResolver::getInstance()->setPackageName('modules_videos')
+			->setDirectory('player')->getPath('jwplayer.swf');
+		$destPath = f_util_FileUtils::buildWebeditPath('media', 'frontoffice', 'jwplayer.swf');
+		f_util_FileUtils::cp($playerPath, $destPath, f_util_FileUtils::OVERRIDE);
 	}
 }
