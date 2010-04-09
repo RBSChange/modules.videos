@@ -25,7 +25,7 @@ class videos_PreferencesService extends f_persistentdocument_DocumentService
 	 */
 	public function getNewDocumentInstance()
 	{
-		return parent::getNewDocumentInstance('modules_videos/preferences');
+		return $this->getNewDocumentInstanceByModelName('modules_videos/preferences');
 	}
 
 	/**

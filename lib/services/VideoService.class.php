@@ -21,7 +21,7 @@ class videos_VideoService extends f_persistentdocument_DocumentService
 	 */
 	public function getNewDocumentInstance()
 	{
-		return parent::getNewDocumentInstance('modules_videos/video');
+		return $this->getNewDocumentInstanceByModelName("modules_videos/video");
 	}
 	
 	/**
@@ -81,7 +81,7 @@ class videos_VideoService extends f_persistentdocument_DocumentService
 	 *
 	 * @param f_persistentdocument_PersistentDocument $document
 	 * @param string $forModuleName
-	 * @param unknown_type $allowedSections
+	 * @param array $allowedSections
 	 * @return array
 	 */
 	public function getResume($document, $forModuleName, $allowedSections)

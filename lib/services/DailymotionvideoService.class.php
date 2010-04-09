@@ -45,7 +45,7 @@ class videos_DailymotionvideoService extends f_persistentdocument_DocumentServic
 	 *
 	 * @param f_persistentdocument_PersistentDocument $document
 	 * @param string $forModuleName
-	 * @param unknown_type $allowedSections
+	 * @param array $allowedSections
 	 * @return array
 	 */
 	public function getResume($document, $forModuleName, $allowedSections)
