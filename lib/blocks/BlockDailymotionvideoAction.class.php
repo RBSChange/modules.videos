@@ -28,7 +28,7 @@ class videos_BlockDailymotionvideoAction extends website_BlockAction
 		$prefs = ModuleService::getInstance()->getPreferencesDocument('videos');
 		
 		$dailyVideo = array();
-		$dailyVideo['getUrl'] = $video->getUrl() . '&colors=background:' . $prefs->getCleanBackground() . ';glow:' . $prefs->getCleanGlow() . ';foreground:' . $prefs->getCleanForeground() . ';special:' . $prefs->getCleanSpecial() . ';&autoPlay=' . $prefs->getDailyAutoPlay();
+		$dailyVideo['getUrl'] = $video->getUrl() . '&background=' . $prefs->getBackgroundForDailymotion() . '&highlight=' . $prefs->getHighlightForDailymotion() . '&foreground=' . $prefs->getForegroundForDailymotion() . '&autoPlay=' . $prefs->getDailyAutoPlay();
 		$dailyVideo['getLabel'] = $video->getLabel();
 		$dailyVideo['getWidth'] = $prefs->getDailyWidth();
 		$dailyVideo['getHeight'] = $prefs->getDailyHeight();

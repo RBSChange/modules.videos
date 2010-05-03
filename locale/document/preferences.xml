@@ -84,9 +84,9 @@
     <locale lang="fr">couleur arrière plan</locale>
     <locale lang="en">background</locale>
   </entity>
-  <entity id="glow">
-    <locale lang="fr">couleur avant plan</locale>
-    <locale lang="en">glow</locale>
+  <entity id="dailymotionhighlight">
+    <locale lang="fr">couleur au survol</locale>
+    <locale lang="en">couleur au survol</locale>
   </entity>
   <entity id="foreground">
     <locale lang="fr">couleur bouton/texte</locale>

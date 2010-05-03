@@ -26,9 +26,8 @@
 		<field name="dailyWidth" />
 		<field name="dailyHeight" />
 		<field name="background" type="color" />
-		<field name="glow" type="color" />
 		<field name="foreground" type="color" />
-		<field name="special" type="color" />
+		<field name="dailymotionhighlight" type="color" />		
 		<field name="dailyAutoPlay" />
 	</section>
 	

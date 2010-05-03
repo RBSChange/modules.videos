@@ -49,9 +49,25 @@ class videos_persistentdocument_preferences extends videos_persistentdocument_pr
 	/**
 	 * @return String
 	 */
+	public function getBackgroundForDailyMotion()
+	{
+		return $this->normalizeColorDailymotion($this->getBackground());
+	}
+	
+	/**
+	 * @return String
+	 */
 	public function getCleanGlow()
 	{
 		return $this->cleanColor($this->getGlow());
+	}
+	
+	/**
+	 * @return String
+	 */
+	public function getGlowForDailyMotion()
+	{
+		return $this->normalizeColorDailymotion($this->getGlow());
 	}
 	
 	/**
@@ -65,9 +81,33 @@ class videos_persistentdocument_preferences extends videos_persistentdocument_pr
 	/**
 	 * @return String
 	 */
+	public function getForegroundForDailyMotion()
+	{
+		return $this->normalizeColorDailymotion($this->getForeground());
+	}
+	
+	/**
+	 * @return String
+	 */
 	public function getCleanSpecial()
 	{
 		return $this->cleanColor($this->getSpecial());
+	}
+	
+	/**
+	 * @return String
+	 */
+	public function getSpecialForDailyMotion()
+	{
+		return $this->normalizeColorDailymotion($this->getSpecial());
+	}
+	
+	/**
+	 * @return String
+	 */
+	public function getHighlightForDailymotion()
+	{
+		return $this->normalizeColorDailymotion($this->getDailymotionhighlight());
 	}
 	
 	/**
@@ -93,10 +133,15 @@ class videos_persistentdocument_preferences extends videos_persistentdocument_pr
 	private function cleanColor($color)
 	{
 		$value = $color;
-		if (is_string($value) && preg_match("/\|#([a-f0-9]{6})/i", $value, $matches))
+		if (is_string($value) && preg_match("/#([a-f0-9]{6})/i", $value, $matches))
 		{
 			$value = '0x' . $matches[1];
 		}
 		return $value;
+	}
+	
+	private function normalizeColorDailymotion($color)
+	{
+		return str_replace('#', '', $color);
 	}
 }
