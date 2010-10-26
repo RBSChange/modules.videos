@@ -38,7 +38,7 @@
 			<method name="extract">
 				<parameter name="permaLink" />
 				<body><![CDATA[
-					var matches = permaLink.match(/(\?|&)v=([a-z0-9]+)($|&)/i);
+					var matches = permaLink.match(/(\?|&)v=([a-z0-9_\-]+)($|&)/i);
 					if (matches !== null && matches.length >= 4)
 					{
 						this.value = matches[2];
