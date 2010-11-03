@@ -71,7 +71,7 @@ class videos_VideoService extends f_persistentdocument_DocumentService
 	public function getPreviewAttributes($document)
 	{
 		$preview = array();
-		$preview['previewUrl'] = LinkHelper::getUrl($document, null, array('videosParam[preview]' => 'true'));
+		$preview['previewUrl'] = LinkHelper::getDocumentUrl($document, null, array('videosParam[preview]' => 'true'));
 		return $preview;
 	}
 	
