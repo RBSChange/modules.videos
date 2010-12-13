@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.videos.document.video" lcid="en_GB">
+  <key id="label">label</key>
+  <key id="label-help">label</key>
+  <key id="file">file</key>
+  <key id="description">description</key>
+  <key id="image">image affichée avant lancement de la vidéo.</key>
+  <key id="startpublicationdate">start publication date</key>
+  <key id="startpublicationdate-help">start publication date</key>
+  <key id="endpublicationdate">end publication date</key>
+  <key id="endpublicationdate-help">end publication date</key>
+</i18n>

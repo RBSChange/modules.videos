@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.videos.document.dailymotionvideo" lcid="fr_FR">
+  <key id="edition-form-title">propriétés d'une vidéo Dailymotion</key>
+  <key id="label">libellé</key>
+  <key id="label-help">libellé</key>
+  <key id="videoid">identifiant de la vidéo</key>
+  <key id="videoid-help">ex: x9okze</key>
+  <key id="exctract-id">extraire l'identifiant du permalien</key>
+  <key id="set-permalink">Saisissez le permalien de la vidéo. Celui-ci peut être récupéré sur la page de la vidéo sur Dailymotion.</key>
+  <key id="bad-link">Le lien que vous venez de saisir n'est pas valide.</key>
+</i18n>

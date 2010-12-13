@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.videos.document.preferences" lcid="en_GB">
+  <key id="edition-form-title">Settings edition</key>
+  <key id="width">player width</key>
+  <key id="height">player height</key>
+  <key id="image">picture</key>
+  <key id="backcolor">back color</key>
+  <key id="frontcolor">front color</key>
+  <key id="lightcolor">buttons rollover</key>
+  <key id="screencolor">screen color</key>
+  <key id="logo">logo</key>
+  <key id="icons">show play icon</key>
+  <key id="controlbar">show controls</key>
+  <key id="usefullscreen">full screen</key>
+  <key id="autostart">autostart</key>
+  <key id="repeat">repeat</key>
+  <key id="dailywidth">player width</key>
+  <key id="dailyheight">player height</key>
+  <key id="background">background</key>
+  <key id="dailymotionhighlight">couleur au survol</key>
+  <key id="foreground">foreground</key>
+  <key id="special">special</key>
+  <key id="dailyautoplay">AutoPlay</key>
+  <key id="youtubewidth">player width</key>
+  <key id="youtubeheight">player height</key>
+  <key id="color1">color1</key>
+  <key id="color2">color2</key>
+  <key id="fs">full screen</key>
+  <key id="border">border</key>
+  <key id="youtubeautoplay">AutoPlay</key>
+</i18n>

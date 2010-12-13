@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.videos.bo.general" lcid="en_GB">
+  <key id="module-name">videos</key>
+  <key id="tree-root-name">videos</key>
+  <key id="system-folder-name">videos</key>
+  <key id="false">no</key>
+  <key id="true">yes</key>
+  <key id="none">center</key>
+  <key id="fit">fit</key>
+  <key id="video-detail">video detail</key>
+  <key id="playlist-detail">playlist detail</key>
+  <key id="technical-information">technical informations</key>
+  <key id="extra-information">preview</key>
+  <key id="general">main</key>
+  <key id="playlist-none">none</key>
+  <key id="playlist-right">right</key>
+  <key id="playlist-over">over</key>
+  <key id="playlist-bottom">bottom</key>
+  <key id="video-bottom">bottom</key>
+  <key id="video-over">over</key>
+  <key id="video-none">none</key>
+  <key id="video-always">always</key>
+  <key id="playlist-position">list display in playlists</key>
+  <key id="control-bar">control bar display</key>
+</i18n>

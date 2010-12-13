@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.videos.bo.blocks.playlist" lcid="en_GB">
+  <key id="width">player width</key>
+  <key id="height">player height</key>
+  <key id="logo">logo</key>
+  <key id="icons">show play icon</key>
+  <key id="controlbar">show controls</key>
+  <key id="usefullscreen">full screen</key>
+  <key id="autostart">autostart</key>
+  <key id="repeat">repeat</key>
+</i18n>
