@@ -42,6 +42,18 @@ class videos_VideoService extends f_persistentdocument_DocumentService
 	}
 	
 	/**
+	 * @param videos_persistentdocument_video $document
+	 */
+	protected function postDelete($document)
+	{
+		$file = $document->getFile();
+		if (TreeService::getInstance()->getInstanceByDocument($file) === null)
+		{
+			$file->delete();
+		}
+	}
+	
+	/**
 	 * Mise à jour des informations des medias attaché à la
 	 *
 	 * @param videos_persistentdocument_video $document
