@@ -2,7 +2,6 @@
 <config>
 	<module>
 		<enabled>true</enabled>
-		<name>videos</name>
 		<visible>true</visible>
 		<icon>film</icon>
 	</module>
