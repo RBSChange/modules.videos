@@ -9,12 +9,12 @@
     <locale lang="en">Settings edition</locale>
     <locale lang="de">Einstellungen bearbeiten</locale>
   </entity>
-  <entity id="width">
+  <entity id="videoWidth">
     <locale lang="fr">largeur du lecteur</locale>
     <locale lang="en">player width</locale>
     <locale lang="de">Breite des Lesegeräts</locale>
   </entity>
-  <entity id="height">
+  <entity id="videoHeight">
     <locale lang="fr">hauteur du lecteur</locale>
     <locale lang="en">player height</locale>
     <locale lang="de">Höhe des Lesegeräts</locale>

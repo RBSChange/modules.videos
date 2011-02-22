@@ -42,13 +42,14 @@ class videos_BlockVideoAction extends website_BlockAction
 		if ($this->isInBackoffice())
 		{
 			$prefs = ModuleService::getInstance()->getPreferencesDocument('videos');
-			$style['width'] = $this->getParameter('width', $prefs->getWidth()) . "px";
-			$style['height'] = $this->getParameter('height', $prefs->getHeight()) . "px";
+			$style['width'] = $this->getParameter('videoWidth', $prefs->getVideoWidth()) . "px";
+			$style['height'] = $this->getParameter('videoHeight', $prefs->getVideoHeight()) . "px";
 			$style['border'] = '1px dotted grey';
 			$request->setAttribute('video', $this->getDocumentParameter(K::COMPONENT_ID_ACCESSOR, 'videos_persistentdocument_video'));
 			$request->setAttribute('style', f_util_HtmlUtils::buildStyleAttribute($style));
 			return website_BlockView::DUMMY;
 		}
+		
 		$video = $this->getVideo();
 		
 		if ($video === null || !$video->isPublished())
@@ -59,8 +60,8 @@ class videos_BlockVideoAction extends website_BlockAction
 		
 		$player = array();
 		$player['getPlayerUrl'] = $prefs->getPlayerUrl();
-		$player['getWidth'] = $this->getConfigurationParameter('width', $prefs->getWidth());
-		$player['getHeight'] = $this->getConfigurationParameter('height', $prefs->getHeight());
+		$player['getWidth'] = $this->getConfigurationParameter('videoWidth', $prefs->getVideoWidth());
+		$player['getHeight'] = $this->getConfigurationParameter('videoHeight', $prefs->getVideoHeight());
 		$player['getCleanBackColor'] = $prefs->getCleanBackColor();
 		$player['getUsefullscreen'] = $this->getConfigurationParameter('usefullscreen', $prefs->getUsefullscreen());
 		$player['getFlashvars'] = implode('&', $this->getFlashvars($this->getConfigurationParameters(), $prefs, $video));
@@ -78,7 +79,8 @@ class videos_BlockVideoAction extends website_BlockAction
 	{
 		$flashvars = array();
 		
-		$properties = array('width', 'height', 'image', 'backcolor', 'frontcolor', 'lightcolor', 'screencolor', 'logo', 'icons', 'controlbar', 'usefullscreen', 'autostart', 'repeat');
+		$properties = array('videoWidth', 'videoHeight', 'image', 'backcolor', 'frontcolor', 'lightcolor', 'screencolor', 'logo', 'icons', 'controlbar', 'usefullscreen', 'autostart', 'repeat');
+		$propNameToFlashName = array('videoWidth' => 'width', 'videoHeight' => 'height');
 		foreach ($properties as $propertyName)
 		{
 			if (isset($params[$propertyName]))
@@ -110,6 +112,11 @@ class videos_BlockVideoAction extends website_BlockAction
 			if ($propertyName == 'repeat')
 			{
 				$value = ($value === 'true' || $value === true) ? 'always' : 'none';
+			}
+			
+			if (isset($propNameToFlashName[$propertyName]))
+			{
+				$propertyName = $propNameToFlashName[$propertyName];
 			}
 			
 			$flashvars[$propertyName] = $propertyName . '=' . $value;

@@ -2,10 +2,10 @@
 <document xmlns="http://www.rbs.fr/schema/change-document/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rbs.fr/schema/change-document/1.0 http://www.rbschange.fr/static/schema/change-document/1.0.xsd" model-version="1.0" icon="videos" publish-on-day-change="false" backoffice-indexable="false" has-url="false">
   <properties>
     <add name="label" default-value="preferences"/>
-    <add name="width" type="String" min-occurs="1" default-value="320">
+    <add name="videoWidth" type="String" min-occurs="1" default-value="320">
       <constraints>integer:true</constraints>
     </add>
-    <add name="height" type="String" min-occurs="1" default-value="240">
+    <add name="videoHeight" type="String" min-occurs="1" default-value="240">
       <constraints>integer:true</constraints>
     </add>
     <add name="autostart" type="String" min-occurs="1" from-list="modules_videos/truefalse" default-value="false"/>

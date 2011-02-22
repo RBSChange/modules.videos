@@ -2,8 +2,8 @@
 <blocks>
 	<block type="modules_videos_video" icon="video" label="&amp;modules.videos.bo.general.Video-detail;">
 		<parameters>
-			<parameter name="width" type="Integer" />
-			<parameter name="height" type="Integer" />
+			<parameter name="videoWidth" type="Integer" />
+			<parameter name="videoHeight" type="Integer" />
 			<parameter name="logo" type="modules_media/media" />
 			<parameter name="icons" type="String" list-id="modules_videos/truefalse" />
 			<parameter name="controlbar" type="String" list-id="modules_videos/controlbar" />
@@ -14,8 +14,8 @@
 	</block>
 	<block type="modules_videos_playlist" icon="video-playlist" label="&amp;modules.videos.bo.general.Playlist-detail;" hidden="true">
 		<parameters>
-			<parameter name="width" type="Integer" />
-			<parameter name="height" type="Integer" />
+			<parameter name="videoWidth" type="Integer" />
+			<parameter name="videoHeight" type="Integer" />
 			<parameter name="logo" type="modules_media/media" />
 			<parameter name="icons" type="String" list-id="modules_videos/truefalse" />
 			<parameter name="controlbar" type="String" list-id="modules_videos/controlbar" />

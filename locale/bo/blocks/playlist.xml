@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <localization>
-	<entity id="width">
+	<entity id="videoWidth">
 		<locale lang="fr">largeur du lecteur</locale>
 		<locale lang="en">player width</locale>
 	</entity>
-	<entity id="height">
+	<entity id="videoHeight">
 		<locale lang="fr">hauteur du lecteur</locale>
 		<locale lang="en">player height</locale>
 	</entity>
