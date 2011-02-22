@@ -49,7 +49,7 @@ class videos_patch_0301 extends patch_BasePatch
 			
 			$idsCount = count($ids);
 			$offset = 0;
-			$chunkLength = 1;
+			$chunkLength = 10;
 			while ($offset < $idsCount)
 			{
 				$subIds = array_slice($ids, $offset, $chunkLength);
