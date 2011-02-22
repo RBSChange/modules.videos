@@ -77,7 +77,7 @@ class videos_VideoService extends f_persistentdocument_DocumentService
 	 * Returns an associative array of attributes to display in the backoffice
 	 * preview panel.
 	 *
-	 * @param sender_persistentdocument_sender $document
+	 * @param videos_persistentdocument_video $document
 	 * @return array<string, string>
 	 */
 	public function getPreviewAttributes($document)
@@ -86,11 +86,8 @@ class videos_VideoService extends f_persistentdocument_DocumentService
 		$preview['previewUrl'] = LinkHelper::getDocumentUrl($document, null, array('videosParam[preview]' => 'true'));
 		return $preview;
 	}
-	
 
 	/**
-	 * @see f_persistentdocument_DocumentService::getResume()
-	 *
 	 * @param f_persistentdocument_PersistentDocument $document
 	 * @param string $forModuleName
 	 * @param array $allowedSections
@@ -104,5 +101,16 @@ class videos_VideoService extends f_persistentdocument_DocumentService
 		$iframeUrl->setQueryParameter('t', time());		
 		$data['content']['iframeurl'] = $iframeUrl->getUrl();
 		return $data;
+	}
+	
+	/**
+	 * @param videos_persistentdocument_video $document
+	 * @param string $moduleName
+	 * @param string $treeType
+	 * @param array<string, string> $nodeAttributes
+	 */
+	public function addTreeAttributes($document, $moduleName, $treeType, &$nodeAttributes)
+	{
+		$nodeAttributes['filesize'] = $document->getFilesize();
 	}
 }
