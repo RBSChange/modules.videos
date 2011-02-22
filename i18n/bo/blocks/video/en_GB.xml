@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <i18n baseKey="m.videos.bo.blocks.video" lcid="en_GB">
-  <key id="width">player width</key>
-  <key id="height">player height</key>
+  <key id="videoWidth">player width</key>
+  <key id="videoHeight">player height</key>
   <key id="logo">logo</key>
   <key id="icons">show play icon</key>
   <key id="controlbar">show controls</key>

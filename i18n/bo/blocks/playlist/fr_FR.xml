@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <i18n baseKey="m.videos.bo.blocks.playlist" lcid="fr_FR">
-  <key id="width">largeur du lecteur</key>
-  <key id="height">hauteur du lecteur</key>
+  <key id="videoWidth">largeur du lecteur</key>
+  <key id="videoHeight">hauteur du lecteur</key>
   <key id="logo">logo</key>
   <key id="icons">montrer icône de lecture</key>
   <key id="controlbar">barre de contrôle</key>

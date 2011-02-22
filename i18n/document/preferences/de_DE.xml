@@ -2,8 +2,8 @@
 <i18n baseKey="m.videos.document.preferences" lcid="de_DE">
   <key id="document-name">Präferenzen</key>
   <key id="edition-form-title">Einstellungen bearbeiten</key>
-  <key id="width">Breite des Lesegeräts</key>
-  <key id="height">Höhe des Lesegeräts</key>
+  <key id="videoWidth">Breite des Lesegeräts</key>
+  <key id="videoHeight">Höhe des Lesegeräts</key>
   <key id="image">Bild</key>
   <key id="backcolor">Hintergrundfarbe des Lesegeräts</key>
   <key id="frontcolor">Textfarbe</key>
