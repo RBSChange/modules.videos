@@ -57,4 +57,27 @@ class videos_DailymotionvideoService extends f_persistentdocument_DocumentServic
 		$data['content']['iframeurl'] = $iframeUrl->getUrl();
 		return $data;
 	}
+	
+	/**
+	 * @param videos_persistentdocument_dailymotionvideo $document
+	 * @param array $attributes
+	 * @param string $content
+	 * @param string $lang
+	 * @return string
+	 */
+	public function getXhtmlFragment($document, $attributes, $content, $lang)
+	{
+		$prefs = ModuleService::getInstance()->getPreferencesDocument('videos');
+		
+		$dailyVideo = array();
+		$dailyVideo['getUrl'] = $document->getUrl() . '&background=' . $prefs->getBackgroundForDailymotion() . '&highlight=' . $prefs->getHighlightForDailymotion() . '&foreground=' . $prefs->getForegroundForDailymotion() . '&autoPlay=' . $prefs->getDailyAutoPlay();
+		$dailyVideo['getLabel'] = $document->getLabel();
+		$dailyVideo['getWidth'] = $prefs->getDailyWidth();
+		$dailyVideo['getHeight'] = $prefs->getDailyHeight();
+				
+		$templateComponent = TemplateLoader::getInstance()->setpackagename('modules_videos')->setMimeContentType(K::HTML)->load('Videos-Block-Dailymotionvideo-Success');
+		$templateComponent->setAttribute('video', $dailyVideo);
+		$content = $templateComponent->execute();
+		return $content;
+	}
 }

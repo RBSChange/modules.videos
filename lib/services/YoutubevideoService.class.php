@@ -58,4 +58,27 @@ class videos_YoutubevideoService extends f_persistentdocument_DocumentService
 		$data['content']['iframeurl'] = $iframeUrl->getUrl();
 		return $data;
 	}
+	
+	/**
+	 * @param videos_persistentdocument_youtubevideo $document
+	 * @param array $attributes
+	 * @param string $content
+	 * @param string $lang
+	 * @return string
+	 */
+	public function getXhtmlFragment($document, $attributes, $content, $lang)
+	{
+		$prefs = ModuleService::getInstance()->getPreferencesDocument('videos');
+		
+		$youtubeVideo = array();
+		$youtubeVideo['getUrl'] = $document->getUrl() . '&color1=' . $prefs->getCleanColor1() . '&color2=' . $prefs->getCleanColor2() . '&fs=' . $prefs->getFs() . '&border=' . $prefs->getBorder() . ';&autoplay=' . $prefs->getYoutubeAutoPlay();
+		$youtubeVideo['getLabel'] = $document->getLabel();
+		$youtubeVideo['getWidth'] = $prefs->getYoutubeWidth();
+		$youtubeVideo['getHeight'] = $prefs->getYoutubeHeight();
+		
+		$templateComponent = TemplateLoader::getInstance()->setpackagename('modules_videos')->setMimeContentType(K::HTML)->load('Videos-Block-Youtubevideo-Success');
+		$templateComponent->setAttribute('video', $youtubeVideo);
+		$content = $templateComponent->execute();
+		return $content;
+	}
 }

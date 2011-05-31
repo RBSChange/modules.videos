@@ -71,62 +71,13 @@ class videos_BlockVideoAction extends website_BlockAction
 	}
 	
 	/**
-	 * @param Array $params
+	 * @param array $params
 	 * @param videos_persistentdocument_preferences $prefs
 	 * @param videos_persistentdocument_video $video
+	 * @return array
 	 */
 	protected function getFlashvars($params, $prefs, $video)
 	{
-		$flashvars = array();
-		
-		$properties = array('videoWidth', 'videoHeight', 'image', 'backcolor', 'frontcolor', 'lightcolor', 'screencolor', 'logo', 'icons', 'controlbar', 'usefullscreen', 'autostart', 'repeat');
-		$propNameToFlashName = array('videoWidth' => 'width', 'videoHeight' => 'height');
-		foreach ($properties as $propertyName)
-		{
-			if (isset($params[$propertyName]))
-			{
-				if ($propertyName == 'logo')
-				{
-					$value = MediaHelper::getPublicFormatedUrl(DocumentHelper::getDocumentInstance($params[$propertyName]), 'modules.videos.frontoffice/logovideo');
-				}
-				else
-				{
-					$value = $params[$propertyName];
-				}
-			}
-			else
-			{
-				$methodName = 'get' . ucfirst($propertyName);
-				$value = $prefs->$methodName();
-				if (is_string($value) && preg_match("/\|#([a-f0-9]{6})/i", $value, $matches))
-				{
-					$value = '0x' . $matches[1];
-				}
-				else if ($value instanceof media_persistentdocument_media)
-				{
-					$methodName = 'get' . ucfirst($propertyName) . 'Url';
-					$value = $prefs->$methodName();
-				}
-			}
-			
-			if ($propertyName == 'repeat')
-			{
-				$value = ($value === 'true' || $value === true) ? 'always' : 'none';
-			}
-			
-			if (isset($propNameToFlashName[$propertyName]))
-			{
-				$propertyName = $propNameToFlashName[$propertyName];
-			}
-			
-			$flashvars[$propertyName] = $propertyName . '=' . $value;
-		}
-		
-		if ($video instanceof videos_persistentdocument_video && $video->getImage() !== null)
-		{
-			$flashvars['image'] = 'image=' . MediaHelper::getPublicFormatedUrl($video->getImage(), 'modules.videos.frontoffice/imagevideo');
-		}
-		$flashvars['file'] = 'file=' . $video->getFileUrl();
-		return $flashvars;
+		return $video->getDocumentService()->getFlashvars($params, $prefs, $video);
 	}
 }
