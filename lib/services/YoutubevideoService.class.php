@@ -58,4 +58,47 @@ class videos_YoutubevideoService extends f_persistentdocument_DocumentService
 		$data['content']['iframeurl'] = $iframeUrl->getUrl();
 		return $data;
 	}
+	
+	/**
+	 * @param videos_persistentdocument_youtubevideo $document
+	 * @param string $moduleName
+	 * @param string $treeType
+	 * @param array<string, string> $nodeAttributes
+	 */
+	public function addTreeAttributes($document, $moduleName, $treeType, &$nodeAttributes)
+	{
+		$lang = RequestContext::getInstance()->getLang();
+		$title = $document->getLabelAsHtml();
+		$ms = ModuleService::getInstance();
+		$styleAttributes = array(
+			'width' => $ms->getPreferenceValue('videos', 'youtubeWidth') . 'px',
+			'height' => $ms->getPreferenceValue('videos', 'youtubeHeight') . 'px',
+			'background-image' => 'url(' . MediaHelper::getIcon('youtubevideo', 'small') . ')'
+		);
+		$style = f_util_HtmlUtils::buildStyleAttribute($styleAttributes);
+		$nodeAttributes[f_tree_parser_AttributesBuilder::HTMLLINK_ATTRIBUTE] = '<a rel="cmpref:' . $document->getId() . '" title="' . $title . '" href="#" lang="' . $lang . '" class="document-dummy" style="' . $style . '">' . $title . '</a>';
+	}
+	
+	/**
+	 * @param videos_persistentdocument_youtubevideo $document
+	 * @param array $attributes
+	 * @param string $content
+	 * @param string $lang
+	 * @return string
+	 */
+	public function getXhtmlFragment($document, $attributes, $content, $lang)
+	{
+		$prefs = ModuleService::getInstance()->getPreferencesDocument('videos');
+		
+		$youtubeVideo = array();
+		$youtubeVideo['getUrl'] = $document->getUrl() . '&color1=' . $prefs->getCleanColor1() . '&color2=' . $prefs->getCleanColor2() . '&fs=' . $prefs->getFs() . '&border=' . $prefs->getBorder() . ';&autoplay=' . $prefs->getYoutubeAutoPlay();
+		$youtubeVideo['getLabel'] = $document->getLabel();
+		$youtubeVideo['getWidth'] = $prefs->getYoutubeWidth();
+		$youtubeVideo['getHeight'] = $prefs->getYoutubeHeight();
+		
+		$templateComponent = TemplateLoader::getInstance()->setpackagename('modules_videos')->setMimeContentType(K::HTML)->load('Videos-Block-Youtubevideo-Success');
+		$templateComponent->setAttribute('video', $youtubeVideo);
+		$content = $templateComponent->execute();
+		return $content;
+	}
 }

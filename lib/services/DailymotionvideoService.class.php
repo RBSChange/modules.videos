@@ -57,4 +57,47 @@ class videos_DailymotionvideoService extends f_persistentdocument_DocumentServic
 		$data['content']['iframeurl'] = $iframeUrl->getUrl();
 		return $data;
 	}
+	
+	/**
+	 * @param videos_persistentdocument_dailymotionvideo $document
+	 * @param string $moduleName
+	 * @param string $treeType
+	 * @param array<string, string> $nodeAttributes
+	 */
+	public function addTreeAttributes($document, $moduleName, $treeType, &$nodeAttributes)
+	{
+		$lang = RequestContext::getInstance()->getLang();
+		$title = $document->getLabelAsHtml();
+		$ms = ModuleService::getInstance();
+		$styleAttributes = array(
+			'width' => $ms->getPreferenceValue('videos', 'dailyWidth') . 'px',
+			'height' => $ms->getPreferenceValue('videos', 'dailyHeight') . 'px',
+			'background-image' => 'url(' . MediaHelper::getIcon('dailymotionvideo', 'small') . ')'
+		);
+		$style = f_util_HtmlUtils::buildStyleAttribute($styleAttributes);
+		$nodeAttributes[f_tree_parser_AttributesBuilder::HTMLLINK_ATTRIBUTE] = '<a rel="cmpref:' . $document->getId() . '" title="' . $title . '" href="#" lang="' . $lang . '" class="document-dummy" style="' . $style . '">' . $title . '</a>';
+	}
+	
+	/**
+	 * @param videos_persistentdocument_dailymotionvideo $document
+	 * @param array $attributes
+	 * @param string $content
+	 * @param string $lang
+	 * @return string
+	 */
+	public function getXhtmlFragment($document, $attributes, $content, $lang)
+	{
+		$prefs = ModuleService::getInstance()->getPreferencesDocument('videos');
+		
+		$dailyVideo = array();
+		$dailyVideo['getUrl'] = $document->getUrl() . '&background=' . $prefs->getBackgroundForDailymotion() . '&highlight=' . $prefs->getHighlightForDailymotion() . '&foreground=' . $prefs->getForegroundForDailymotion() . '&autoPlay=' . $prefs->getDailyAutoPlay();
+		$dailyVideo['getLabel'] = $document->getLabel();
+		$dailyVideo['getWidth'] = $prefs->getDailyWidth();
+		$dailyVideo['getHeight'] = $prefs->getDailyHeight();
+				
+		$templateComponent = TemplateLoader::getInstance()->setpackagename('modules_videos')->setMimeContentType(K::HTML)->load('Videos-Block-Dailymotionvideo-Success');
+		$templateComponent->setAttribute('video', $dailyVideo);
+		$content = $templateComponent->execute();
+		return $content;
+	}
 }
