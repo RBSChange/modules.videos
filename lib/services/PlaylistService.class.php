@@ -39,4 +39,17 @@ class videos_PlaylistService extends f_persistentdocument_DocumentService
 	{
 		return $this->pp->createQuery('modules_videos/playlist');
 	}
+	
+	/**
+	 * @param array $params
+	 * @param videos_persistentdocument_preferences $prefs
+	 * @param videos_persistentdocument_video $video
+	 * @return array
+	 */
+	public function getFlashvars($params, $prefs, $video)
+	{
+		$flashvars = videos_VideoService::getInstance()->getFlashvars($params, $prefs, $video);
+		$flashvars['playlist'] = 'playlist=' . $video->getPosition();
+		return $flashvars;
+	}
 }

@@ -5,26 +5,6 @@
  */
 class videos_BlockVideoAction extends website_BlockAction
 {
-	/**
-	 * @return array<String, String> couples of (parameter name / value) that are used by the block
-	 */
-	public function getCacheKeyParameters($request)
-	{
-		$keys = array('params' => $this->getConfigurationParameters());
-		$keys['cmpref'] = $this->getDocumentIdParameter();
-		$keys['lang'] = $this->getLang();
-		$keys['pageId'] = $this->getPage()->getId();
-		return $keys;
-	}
-	
-	/**
-	 * @return array<String>
-	 */
-	public function getCacheDependencies()
-	{
-		return array('modules_videos/video', 'module_media/media', 'modules_videos/preferences');
-	}
-	
 	protected function getVideo()
 	{
 		return $this->getDocumentParameter(K::COMPONENT_ID_ACCESSOR, 'videos_persistentdocument_video');
