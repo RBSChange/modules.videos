@@ -1,3 +1,0 @@
-Version: 3.5.0
-
-Configuration parameters width & height renamed to videoWidth & videoHeight to fix bug #27358.
