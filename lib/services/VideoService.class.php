@@ -72,20 +72,6 @@ class videos_VideoService extends f_persistentdocument_DocumentService
 			}
 		}
 	}
-	
-	/**
-	 * Returns an associative array of attributes to display in the backoffice
-	 * preview panel.
-	 *
-	 * @param videos_persistentdocument_video $document
-	 * @return array<string, string>
-	 */
-	public function getPreviewAttributes($document)
-	{
-		$preview = array();
-		$preview['previewUrl'] = LinkHelper::getDocumentUrl($document, null, array('videosParam[preview]' => 'true'));
-		return $preview;
-	}
 
 	/**
 	 * @param f_persistentdocument_PersistentDocument $document
