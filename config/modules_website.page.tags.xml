@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
 <tags extends="generic">
-	<tag label="&amp;modules.videos.bo.general.tag.Detail;" icon="video">contextual_website_website_modules_videos_page-detail</tag>
+	<tag labeli18n="m.videos.bo.general.tag.detail" icon="video">contextual_website_website_modules_videos_page-detail</tag>
 </tags>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <blocks>
-	<block type="modules_videos_video" icon="video" label="&amp;modules.videos.bo.general.Video-detail;">
+	<block type="modules_videos_video" icon="video" labeli18n="m.videos.bo.general.video-detail">
 		<parameters>
 			<parameter name="videoWidth" type="Integer" />
 			<parameter name="videoHeight" type="Integer" />
@@ -12,7 +12,7 @@
 			<parameter name="repeat" type="String" list-id="modules_videos/truefalse" />
 		</parameters>
 	</block>
-	<block type="modules_videos_playlist" icon="video-playlist" label="&amp;modules.videos.bo.general.Playlist-detail;" hidden="true">
+	<block type="modules_videos_playlist" icon="video-playlist" labeli18n="m.videos.bo.general.playlist-detail" hidden="true">
 		<parameters>
 			<parameter name="videoWidth" type="Integer" />
 			<parameter name="videoHeight" type="Integer" />
@@ -24,6 +24,6 @@
 			<parameter name="repeat" type="String" list-id="modules_videos/truefalse" />
 		</parameters>
 	</block>
-	<block type="modules_videos_youtubevideo" icon="youtubevideo" label="&amp;modules.videos.bo.general.Playlist-detail;" hidden="true"  />
-	<block type="modules_videos_dailymotionvideo" icon="dailymotionvideo" label="&amp;modules.videos.bo.general.Playlist-detail;" hidden="true" />
+	<block type="modules_videos_youtubevideo" icon="youtubevideo" labeli18n="m.videos.bo.general.playlist-detail" hidden="true" />
+	<block type="modules_videos_dailymotionvideo" icon="dailymotionvideo" labeli18n="m.videos.bo.general.playlist-detail" hidden="true" />
 </blocks>
