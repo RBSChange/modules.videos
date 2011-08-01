@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <panel>
-	<section labeli18n="modules.videos.document.preferences.Edition-form-title">
+	<section labeli18n="m.videos.document.preferences.edition-form-title">
 		<field name="width" size="5"/>
 		<field name="height" size="5"/>
 		<field name="autostart" />
 		<field name="repeat" />
 	</section>
 	
-	<section labeli18n="modules.videos.bo.tabs.Display-appearance">
+	<section labeli18n="m.videos.bo.tabs.display-appearance">
 		<field name="logo" />
 		<field name="image" />
 		<field name="icons" />
@@ -15,14 +15,14 @@
 		<field name="usefullscreen" />
 	</section>
 	
-	<section labeli18n="modules.videos.bo.tabs.Colors">
+	<section labeli18n="m.videos.bo.tabs.colors">
 		<field name="backcolor" type="color" />
 		<field name="frontcolor" type="color" />
 		<field name="lightcolor" type="color" />
 		<field name="screencolor" type="color" />
 	</section>
 	
-	<section labeli18n="modules.videos.bo.tabs.dailymotion">
+	<section labeli18n="m.videos.bo.tabs.dailymotion">
 		<field name="dailyWidth" />
 		<field name="dailyHeight" />
 		<field name="background" type="color" />
@@ -31,7 +31,7 @@
 		<field name="dailyAutoPlay" />
 	</section>
 	
-	<section labeli18n="modules.videos.bo.tabs.youtube">
+	<section labeli18n="m.videos.bo.tabs.youtube">
 		<field name="youtubeWidth" />
 		<field name="youtubeHeight" />
 		<field name="color1" type="color" />
