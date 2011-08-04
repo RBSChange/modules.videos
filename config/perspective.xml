@@ -14,7 +14,7 @@
 				<drop model="modules_generic/folder" action="move" />
 			</drops>
 			<columns>
-				<column name="filesize" label="Filesize" flex="2" />
+				<column name="filesize" flex="2" />
 			</columns>
 			<contextactions>
 				<contextaction name="edit" />
