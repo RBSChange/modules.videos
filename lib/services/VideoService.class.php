@@ -108,7 +108,7 @@ class videos_VideoService extends f_persistentdocument_DocumentService
 			'background-image' => 'url(' . MediaHelper::getIcon('video', 'small') . ')'
 		);
 		$style = f_util_HtmlUtils::buildStyleAttribute($styleAttributes);
-		$nodeAttributes[f_tree_parser_AttributesBuilder::HTMLLINK_ATTRIBUTE] = '<a rel="cmpref:' . $document->getId() . '" title="' . $title . '" href="#" lang="' . $lang . '" class="document-dummy" style="' . $style . '">' . $title . '</a>';
+		$nodeAttributes['htmllink'] = '<a rel="cmpref:' . $document->getId() . '" title="' . $title . '" href="#" lang="' . $lang . '" class="document-dummy" style="' . $style . '">' . $title . '</a>';
 		
 	}
 	
