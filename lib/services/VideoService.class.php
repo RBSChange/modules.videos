@@ -25,6 +25,15 @@ class videos_VideoService extends f_persistentdocument_DocumentService
 	}
 	
 	/**
+	 * Create a query based on 'modules_videos/video' model
+	 * @return f_persistentdocument_criteria_Query
+	 */
+	public function createQuery()
+	{
+		return $this->pp->createQuery('modules_videos/video');
+	}
+	
+	/**
 	 * @param videos_persistentdocument_video $document
 	 * @param Integer $parentNodeId Parent node ID where to save the document (optionnal => can be null !).
 	 * @return void
