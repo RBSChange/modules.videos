@@ -5,14 +5,7 @@
  */
 class videos_BlockVideoAction extends website_BlockAction
 {
-	protected function getVideo()
-	{
-		return $this->getDocumentParameter(K::COMPONENT_ID_ACCESSOR, 'videos_persistentdocument_video');
-	}
-	
 	/**
-	 * @see website_BlockAction::execute()
-	 *
 	 * @param f_mvc_Request $request
 	 * @param f_mvc_Response $response
 	 * @return String
@@ -25,14 +18,24 @@ class videos_BlockVideoAction extends website_BlockAction
 			$style['width'] = $this->getParameter('videoWidth', $prefs->getVideoWidth()) . "px";
 			$style['height'] = $this->getParameter('videoHeight', $prefs->getVideoHeight()) . "px";
 			$style['border'] = '1px dotted grey';
-			$request->setAttribute('video', $this->getDocumentParameter(K::COMPONENT_ID_ACCESSOR, 'videos_persistentdocument_video'));
+			$request->setAttribute('video', $this->getDocumentParameter());
 			$request->setAttribute('style', f_util_HtmlUtils::buildStyleAttribute($style));
 			return website_BlockView::DUMMY;
 		}
 		
-		$video = $this->getVideo();
-		
-		if ($video === null || !$video->isPublished())
+		// This block will be used for the detail page of all types of videos, so forward to the appropriate block.
+		$video = $this->getDocumentParameter();
+		if ($video instanceof videos_persistentdocument_dailymotionvideo)
+		{
+			$this->forward('videos', 'Dailymotionvideo');
+			return website_BlockView::NONE;
+		}
+		elseif ($video instanceof videos_persistentdocument_youtubevideo)
+		{
+			$this->forward('videos', 'Youtubevideo');
+			return website_BlockView::NONE;
+		}
+		elseif (!($video instanceof videos_persistentdocument_video) || !$video->isPublished())
 		{
 			return website_BlockView::NONE;
 		}
@@ -59,5 +62,13 @@ class videos_BlockVideoAction extends website_BlockAction
 	protected function getFlashvars($params, $prefs, $video)
 	{
 		return $video->getDocumentService()->getFlashvars($params, $prefs, $video);
+	}
+	
+	/**
+	 * @deprecated
+	 */
+	protected function getVideo()
+	{
+		return $this->getDocumentParameter(K::COMPONENT_ID_ACCESSOR, 'videos_persistentdocument_video');
 	}
 }
