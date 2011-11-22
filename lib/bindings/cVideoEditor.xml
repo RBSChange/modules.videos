@@ -14,7 +14,7 @@
 					</xul:toolbar>
 				</xul:hbox>
 				<xul:hbox>
-					<xul:button label="${transui:m.videos.document.youtubevideo.Exctract-idEllipsis,ucf,attr}" oncommand="extractPermalink()" image="{IconsBase}/small/funnel.png" />
+					<xul:button label="${transui:m.videos.document.youtubevideo.Exctract-id,ucf,etc,attr}" oncommand="extractPermalink()" image="{IconsBase}/small/funnel.png" />
 					<xul:spacer flex="1" />
 				</xul:hbox>
 			</xul:vbox>
@@ -38,15 +38,23 @@
 			<method name="extract">
 				<parameter name="permaLink" />
 				<body><![CDATA[
+					// First format: http://www.youtube.com/watch?v=92cQ02ymk3E
 					var matches = permaLink.match(/(\?|&)v=([a-z0-9_\-]+)($|&|#)/i);
 					if (matches !== null && matches.length >= 4)
 					{
 						this.value = matches[2];
+						return;
 					}
-					else
+					
+					// Second format: http://youtu.be/92cQ02ymk3E					
+					var matches = permaLink.match(/(\/)youtu.be\/([a-z0-9_\-]+)($|&|#)/i);
+					if (matches !== null && matches.length >= 4)
 					{
-						alert("&modules.videos.document.youtubevideo.Bad-link;");
-					}	
+						this.value = matches[2];
+						return;
+					}
+					
+					alert("${transui:m.videos.document.youtubevideo.bad-link,ucf}");
 				]]></body>
 			</method>
 		</implementation>
