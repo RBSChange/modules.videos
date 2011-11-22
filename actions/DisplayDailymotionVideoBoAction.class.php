@@ -3,11 +3,11 @@
  * DisplayDailymotionVideoBoAction
  * @package modules.videos.actions
  */
-class videos_DisplayDailymotionVideoBoAction extends f_action_BaseAction 
+class videos_DisplayDailymotionVideoBoAction extends change_Action 
 {
 	/**
-	 * @param Context $context
-	 * @param Request $request
+	 * @param change_Context $context
+	 * @param change_Request $request
 	 */
 	public function _execute($context, $request)
 	{

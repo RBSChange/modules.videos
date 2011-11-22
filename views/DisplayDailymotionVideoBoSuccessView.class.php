@@ -3,15 +3,14 @@
  * DisplayDailymotionVideoBoSuccessView
  * @param modules.video
  */
-class videos_DisplayDailymotionVideoBoSuccessView extends f_view_BaseView
+class videos_DisplayDailymotionVideoBoSuccessView extends change_View
 {
 	/**
-	 * @param Context $context
-	 * @param Request $request
+	 * @param change_Context $context
+	 * @param change_Request $request
 	 */
 	public function _execute($context, $request)
 	{
-		
 	    $this->setTemplateName('YoutubeVideo-Success');	    
         $this->setAttributes($request->getParameters());
 	}
