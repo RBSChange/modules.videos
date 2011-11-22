@@ -4,9 +4,11 @@
   <key id="label-help">label</key>
   <key id="file">file</key>
   <key id="description">description</key>
-  <key id="image">image affichée avant lancement de la vidéo.</key>
+  <key id="image">image</key>
   <key id="startpublicationdate">start publication date</key>
   <key id="startpublicationdate-help">start publication date</key>
-  <key id="endpublicationdate">end publication date</key>
-  <key id="endpublicationdate-help">end publication date</key>
+  <key id="endpublicationdate">end of publication date</key>
+  <key id="endpublicationdate-help">end of publication date</key>
+  <key id="document-name">video</key>
+  <key id="file-help">Video file. This must be in FLV format.</key>
 </i18n>

@@ -3,6 +3,9 @@
   <key id="edition-form-title">Dailymotion video properties</key>
   <key id="label">label</key>
   <key id="label-help">label</key>
-  <key id="videoid">video id</key>
-  <key id="videoid-help">ex: x9okze</key>
+  <key id="videoid">video identifier</key>
+  <key id="videoid-help">e.g...: x9okze</key>
+  <key id="bad-link">The link that you just entered is invalid.</key>
+  <key id="exctract-id">extract the identifier from the permalink</key>
+  <key id="set-permalink">Please enter video's permalink. It can be obtained on the video's page on Dailymotion.</key>
 </i18n>

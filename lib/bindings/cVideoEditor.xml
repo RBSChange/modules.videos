@@ -14,13 +14,13 @@
 					</xul:toolbar>
 				</xul:hbox>
 				<xul:hbox>
-					<xul:button label="&amp;modules.videos.document.youtubevideo.Exctract-idEllipsis;" oncommand="extractPermalink()" image="{IconsBase}/small/funnel.png" />
+					<xul:button label="${transui:m.videos.document.youtubevideo.Exctract-idEllipsis,ucf,attr}" oncommand="extractPermalink()" image="{IconsBase}/small/funnel.png" />
 					<xul:spacer flex="1" />
 				</xul:hbox>
 			</xul:vbox>
 		</content>
 		<implementation>
-			<field name="promptLabel">"&amp;modules.videos.document.youtubevideo.Set-permalink;"</field>
+			<field name="promptLabel">"${transui:m.videos.document.youtubevideo.Set-permalink,ucf,js}"</field>
 			<method name="extractPermalink">
 				<body><![CDATA[
 					var permaLink = prompt(this.promptLabel);
@@ -54,7 +54,7 @@
 	
 	<binding id="cDailymotionVideoId" extends="modules.videos.cVideoEditor#cYoutubeVideoId">
 		<implementation>
-			<field name="promptLabel">"&amp;modules.videos.document.dailymotionvideo.Set-permalink;"</field>
+			<field name="promptLabel">"${transui:m.videos.document.dailymotionvideo.Set-permalink,ucf,js}"</field>
 			<method name="extract">
 				<parameter name="permaLink" />
 				<body><![CDATA[

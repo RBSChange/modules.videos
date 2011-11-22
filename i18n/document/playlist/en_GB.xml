@@ -7,6 +7,12 @@
   <key id="position">list position</key>
   <key id="startpublicationdate">start publication date</key>
   <key id="startpublicationdate-help">start publication date</key>
-  <key id="endpublicationdate">end publication date</key>
-  <key id="endpublicationdate-help">end publication date</key>
+  <key id="endpublicationdate">end of publication date</key>
+  <key id="endpublicationdate-help">end of publication date</key>
+  <key id="position-help">video list position:
+ - Random: a video from the list is chosen at random.
+ - Bottom: the video list is positioned below the viewer.
+ - Right: the video list is positioned to the right of the viewer.
+ - Over: when no video is being played, the video list replaces the viewer.</key>
+  <key id="video-help">drop the videos that make up the playlist here</key>
 </i18n>

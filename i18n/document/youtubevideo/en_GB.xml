@@ -3,6 +3,9 @@
   <key id="edition-form-title">YouTube video properties</key>
   <key id="label">label</key>
   <key id="label-help">label</key>
-  <key id="videoid">video id</key>
-  <key id="videoid-help">ex: IpQ9RESJnWM</key>
+  <key id="videoid">video identifier</key>
+  <key id="videoid-help">e.g.: IpQ9RESJnWM</key>
+  <key id="bad-link">The link that you just entered is invalid.</key>
+  <key id="exctract-id">extract the identifier from the URL</key>
+  <key id="set-permalink">Enter the video's URL. It can be obtained on the video's page on YouTube.</key>
 </i18n>

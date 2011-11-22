@@ -4,8 +4,8 @@
   <key id="videoHeight">player height</key>
   <key id="logo">logo</key>
   <key id="icons">show play icon</key>
-  <key id="controlbar">show controls</key>
-  <key id="usefullscreen">full screen</key>
+  <key id="controlbar">show control bar</key>
+  <key id="usefullscreen">allow full screen display</key>
   <key id="autostart">autostart</key>
   <key id="repeat">repeat</key>
 </i18n>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <i18n baseKey="m.videos.bo.tabs" lcid="en_GB">
-  <key id="general">main</key>
-  <key id="colors">colors</key>
+  <key id="general">general</key>
+  <key id="colors">colours</key>
   <key id="display-appearance">appearance</key>
   <key id="dailymotion">Dailymotion</key>
   <key id="youtube">YouTube</key>
