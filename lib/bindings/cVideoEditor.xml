@@ -1,26 +1,26 @@
 <?xml version="1.0"?>
-<bindings xmlns="http://www.mozilla.org/xbl" xmlns:xbl="http://www.mozilla.org/xbl" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-
-
+<bindings xmlns="http://www.mozilla.org/xbl" xmlns:xbl="http://www.mozilla.org/xbl" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 	<binding id="cYoutubeVideoId" extends="form.cField#cTextField">
 		<content>
 			<children />
 			<xul:vbox>
 				<xul:hbox xbl:inherits="context,spellcheck" flex="1">
-					<xul:textbox anonid="internalcontrol" size="50" maxlength="255" xbl:inherits="maxlength,disabled,size,tabindex,accesskey"/>
+					<xul:textbox anonid="internalcontrol" size="50" maxlength="255" xbl:inherits="maxlength,disabled,size,tabindex,accesskey" />
 					<xul:toolbar>
-						<xul:toolbarbutton image="chrome://global/skin/icons/question-16.png" xbl:inherits="hidden=hidehelp" 
-							oncommand="dispatchFieldEvent('fieldHelp');"/>
+						<xul:toolbarbutton image="chrome://global/skin/icons/question-16.png" xbl:inherits="hidden=hidehelp"
+							oncommand="dispatchFieldEvent('fieldHelp');" />
 					</xul:toolbar>
 				</xul:hbox>
 				<xul:hbox>
-					<xul:button label="&amp;modules.videos.document.youtubevideo.Exctract-idEllipsis;" oncommand="extractPermalink()" image="{IconsBase}/small/funnel.png" />
+					<xul:button label="${transui:m.videos.document.youtubevideo.Exctract-id,ucf,etc,attr}" oncommand="extractPermalink()"
+						image="{IconsBase}/small/funnel.png" />
 					<xul:spacer flex="1" />
 				</xul:hbox>
 			</xul:vbox>
 		</content>
 		<implementation>
-			<field name="promptLabel">"&amp;modules.videos.document.youtubevideo.Set-permalink;"</field>
+			<field name="promptLabel">"${transui:m.videos.document.youtubevideo.set-permalink,ucf,js}"</field>
 			<method name="extractPermalink">
 				<body><![CDATA[
 					var permaLink = prompt(this.promptLabel);
@@ -38,23 +38,31 @@
 			<method name="extract">
 				<parameter name="permaLink" />
 				<body><![CDATA[
+					// First format: http://www.youtube.com/watch?v=92cQ02ymk3E
 					var matches = permaLink.match(/(\?|&)v=([a-z0-9_\-]+)($|&|#)/i);
 					if (matches !== null && matches.length >= 4)
 					{
 						this.value = matches[2];
+						return;
 					}
-					else
+					
+					// Second format: http://youtu.be/92cQ02ymk3E					
+					var matches = permaLink.match(/(\/)youtu.be\/([a-z0-9_\-]+)($|&|#)/i);
+					if (matches !== null && matches.length >= 4)
 					{
-						alert("&modules.videos.document.youtubevideo.Bad-link;");
-					}	
+						this.value = matches[2];
+						return;
+					}
+					
+					alert("${transui:m.videos.document.youtubevideo.bad-link,ucf,js}");
 				]]></body>
 			</method>
 		</implementation>
 	</binding>
-	
+
 	<binding id="cDailymotionVideoId" extends="modules.videos.cVideoEditor#cYoutubeVideoId">
 		<implementation>
-			<field name="promptLabel">"&amp;modules.videos.document.dailymotionvideo.Set-permalink;"</field>
+			<field name="promptLabel">"${transui:m.videos.document.dailymotionvideo.set-permalink,ucf,js}"</field>
 			<method name="extract">
 				<parameter name="permaLink" />
 				<body><![CDATA[
@@ -65,7 +73,7 @@
 						}
 						else
 						{
-							alert("&modules.videos.document.dailymotionvideo.Bad-link;");
+							alert("${transui:m.videos.document.dailymotionvideo.bad-link,ucf,js}");
 						}	
 				]]></body>
 			</method>
