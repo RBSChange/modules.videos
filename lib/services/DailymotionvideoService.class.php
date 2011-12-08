@@ -58,22 +58,25 @@ class videos_DailymotionvideoService extends f_persistentdocument_DocumentServic
 	
 	/**
 	 * @param videos_persistentdocument_dailymotionvideo $document
+	 * @param array<string, string> $attributes
+	 * @param integer $mode
 	 * @param string $moduleName
-	 * @param string $treeType
-	 * @param array<string, string> $nodeAttributes
 	 */
-	public function addTreeAttributes($document, $moduleName, $treeType, &$nodeAttributes)
+	public function completeBOAttributes($document, &$attributes, $mode, $moduleName)
 	{
-		$lang = RequestContext::getInstance()->getLang();
-		$title = $document->getLabelAsHtml();
-		$ms = ModuleService::getInstance();
-		$styleAttributes = array(
-			'width' => $ms->getPreferenceValue('videos', 'dailyWidth') . 'px',
-			'height' => $ms->getPreferenceValue('videos', 'dailyHeight') . 'px',
-			'background-image' => 'url(' . MediaHelper::getIcon('dailymotionvideo', 'small') . ')'
-		);
-		$style = f_util_HtmlUtils::buildStyleAttribute($styleAttributes);
-		$nodeAttributes['htmllink'] = '<a rel="cmpref:' . $document->getId() . '" title="' . $title . '" href="#" lang="' . $lang . '" class="document-dummy" style="' . $style . '">' . $title . '</a>';
+		if ($mode & DocumentHelper::MODE_RESOURCE)
+		{
+			$lang = RequestContext::getInstance()->getLang();
+			$title = $document->getLabelAsHtml();
+			$ms = ModuleService::getInstance();
+			$styleAttributes = array(
+				'width' => $ms->getPreferenceValue('videos', 'dailyWidth') . 'px',
+				'height' => $ms->getPreferenceValue('videos', 'dailyHeight') . 'px',
+				'background-image' => 'url(' . MediaHelper::getIcon('dailymotionvideo', 'small') . ')'
+			);
+			$style = f_util_HtmlUtils::buildStyleAttribute($styleAttributes);
+			$attributes['htmllink'] = '<a rel="cmpref:' . $document->getId() . '" title="' . $title . '" href="#" lang="' . $lang . '" class="document-dummy" style="' . $style . '">' . $title . '</a>';
+		}
 	}
 	
 	/**

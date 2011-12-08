@@ -59,22 +59,25 @@ class videos_YoutubevideoService extends f_persistentdocument_DocumentService
 	
 	/**
 	 * @param videos_persistentdocument_youtubevideo $document
+	 * @param array<string, string> $attributes
+	 * @param integer $mode
 	 * @param string $moduleName
-	 * @param string $treeType
-	 * @param array<string, string> $nodeAttributes
 	 */
-	public function addTreeAttributes($document, $moduleName, $treeType, &$nodeAttributes)
+	public function completeBOAttributes($document, &$attributes, $mode, $moduleName)
 	{
-		$lang = RequestContext::getInstance()->getLang();
-		$title = $document->getLabelAsHtml();
-		$ms = ModuleService::getInstance();
-		$styleAttributes = array(
-			'width' => $ms->getPreferenceValue('videos', 'youtubeWidth') . 'px',
-			'height' => $ms->getPreferenceValue('videos', 'youtubeHeight') . 'px',
-			'background-image' => 'url(' . MediaHelper::getIcon('youtubevideo', 'small') . ')'
-		);
-		$style = f_util_HtmlUtils::buildStyleAttribute($styleAttributes);
-		$nodeAttributes['htmllink'] = '<a rel="cmpref:' . $document->getId() . '" title="' . $title . '" href="#" lang="' . $lang . '" class="document-dummy" style="' . $style . '">' . $title . '</a>';
+		if ($mode & DocumentHelper::MODE_RESOURCE)
+		{
+			$lang = RequestContext::getInstance()->getLang();
+			$title = $document->getLabelAsHtml();
+			$ms = ModuleService::getInstance();
+			$styleAttributes = array(
+				'width' => $ms->getPreferenceValue('videos', 'youtubeWidth') . 'px',
+				'height' => $ms->getPreferenceValue('videos', 'youtubeHeight') . 'px',
+				'background-image' => 'url(' . MediaHelper::getIcon('youtubevideo', 'small') . ')'
+			);
+			$style = f_util_HtmlUtils::buildStyleAttribute($styleAttributes);
+			$attributes['htmllink'] = '<a rel="cmpref:' . $document->getId() . '" title="' . $title . '" href="#" lang="' . $lang . '" class="document-dummy" style="' . $style . '">' . $title . '</a>';
+		}
 	}
 	
 	/**

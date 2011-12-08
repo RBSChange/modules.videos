@@ -10,4 +10,5 @@
   <actiondef modulename="videos" actionname="activate.playlist" label="modules.videos.bo.useractionlogger.activate-playlist"/>
   <actiondef modulename="videos" actionname="insert.folder" label="modules.videos.bo.useractionlogger.insert-folder"/>
   <actiondef modulename="videos" actionname="insert.youtubevideo" label="m.videos.bo.useractionlogger.insert-youtubevideo"/>
+  <actiondef modulename="videos" actionname="insert.dailymotionvideo" label="m.videos.bo.useractionlogger.insert-dailymotionvideo"/>
 </script>

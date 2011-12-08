@@ -41,6 +41,9 @@
 				<drop model="modules_videos/video" action="move" />
 				<drop model="modules_generic/folder" action="move" />
 			</drops>
+			<columns>
+				<column name="filesize" flex="2" />
+			</columns>
 			<contextactions>
 				<contextaction name="edit" />
 				<contextaction name="delete" />
@@ -100,8 +103,7 @@
 		<toolbarbutton name="reactivate" />
 	</toolbar>
 	<actions>
-		<action name="refresh" single="true" icon="refresh" labeli18n="m.uixul.bo.actions.refresh"/>
-
+		<action name="refresh" single="true" icon="refresh" labeli18n="m.uixul.bo.actions.refresh" />
 		<action name="delete" permission="Delete" icon="delete" labeli18n="m.uixul.bo.actions.delete" />
 		<action name="edit" single="true" permission="Load" icon="edit" labeli18n="m.uixul.bo.actions.edit" />
 		<action name="activate" permission="Activate" icon="activate" labeli18n="m.uixul.bo.actions.activate" />

@@ -83,7 +83,7 @@ class videos_VideoService extends f_persistentdocument_DocumentService
 	}
 
 	/**
-	 * @param f_persistentdocument_PersistentDocument $document
+	 * @param videos_persistentdocument_video $document
 	 * @param string $forModuleName
 	 * @param array $allowedSections
 	 * @return array
@@ -100,29 +100,34 @@ class videos_VideoService extends f_persistentdocument_DocumentService
 	
 	/**
 	 * @param videos_persistentdocument_video $document
+	 * @param array<string, string> $attributes
+	 * @param integer $mode
 	 * @param string $moduleName
-	 * @param string $treeType
-	 * @param array<string, string> $nodeAttributes
 	 */
-	public function addTreeAttributes($document, $moduleName, $treeType, &$nodeAttributes)
+	public function completeBOAttributes($document, &$attributes, $mode, $moduleName)
 	{
-		$nodeAttributes['filesize'] = $document->getFilesize();
+		if ($mode & DocumentHelper::MODE_RESOURCE)
+		{
+			$lang = RequestContext::getInstance()->getLang();
+			$title = $document->getLabelAsHtml();
+			$ms = ModuleService::getInstance();
+			$styleAttributes = array(
+				'width' => $ms->getPreferenceValue('videos', 'videoWidth') . 'px',
+				'height' => $ms->getPreferenceValue('videos', 'videoHeight') . 'px',
+				'background-image' => 'url(' . MediaHelper::getIcon('video', 'small') . ')'
+			);
+			$style = f_util_HtmlUtils::buildStyleAttribute($styleAttributes);
+			$attributes['htmllink'] = '<a rel="cmpref:' . $document->getId() . '" title="' . $title . '" href="#" lang="' . $lang . '" class="document-dummy" style="' . $style . '">' . $title . '</a>';
+		}
 		
-		$lang = RequestContext::getInstance()->getLang();
-		$title = $document->getLabelAsHtml();
-		$ms = ModuleService::getInstance();
-		$styleAttributes = array(
-			'width' => $ms->getPreferenceValue('videos', 'videoWidth') . 'px',
-			'height' => $ms->getPreferenceValue('videos', 'videoHeight') . 'px',
-			'background-image' => 'url(' . MediaHelper::getIcon('video', 'small') . ')'
-		);
-		$style = f_util_HtmlUtils::buildStyleAttribute($styleAttributes);
-		$nodeAttributes['htmllink'] = '<a rel="cmpref:' . $document->getId() . '" title="' . $title . '" href="#" lang="' . $lang . '" class="document-dummy" style="' . $style . '">' . $title . '</a>';
-		
+		if ($mode & DocumentHelper::MODE_CUSTOM)
+		{
+			$attributes['filesize'] = $document->getFilesize();
+		}
 	}
 	
 	/**
-	 * @param videos_persistentdocument_youtubevideo $document
+	 * @param videos_persistentdocument_video $document
 	 * @param array $attributes
 	 * @param string $content
 	 * @param string $lang

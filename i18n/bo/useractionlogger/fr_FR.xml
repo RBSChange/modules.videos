@@ -16,4 +16,6 @@
   <key id="log-activate-playlist">log-activate-playlist</key>
   <key id="insert-folder">insert.folder {documentlabel}</key>
   <key id="log-insert-folder">log-insert-folder</key>
+  <key id="insert-dailymotionvideo">insert.dailymotionvideo {lang} {documentlabel}</key>
+  <key id="log-insert-dailymotionvideo">log insert dailymotionvideo</key>
 </i18n>
