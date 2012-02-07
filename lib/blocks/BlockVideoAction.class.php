@@ -10,7 +10,7 @@ class videos_BlockVideoAction extends website_BlockAction
 	 * @param f_mvc_Response $response
 	 * @return String
 	 */
-	function execute($request, $response)
+	public function execute($request, $response)
 	{
 		if ($this->isInBackoffice())
 		{
@@ -35,7 +35,7 @@ class videos_BlockVideoAction extends website_BlockAction
 			$this->forward('videos', 'Youtubevideo');
 			return website_BlockView::NONE;
 		}
-		elseif (!($video instanceof videos_persistentdocument_video) || !$video->isPublished())
+		elseif ((!($video instanceof videos_persistentdocument_video) && !($video instanceof videos_persistentdocument_playlist)) || !$video->isPublished())
 		{
 			return website_BlockView::NONE;
 		}
@@ -65,10 +65,10 @@ class videos_BlockVideoAction extends website_BlockAction
 	}
 	
 	/**
-	 * @deprecated
+	 * @return f_persistentdocument_PersistentDocument
 	 */
 	protected function getVideo()
 	{
-		return $this->getDocumentParameter(K::COMPONENT_ID_ACCESSOR, 'videos_persistentdocument_video');
+		return $this->getDocumentParameter();
 	}
 }
