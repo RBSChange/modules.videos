@@ -24,7 +24,7 @@ class videos_BlockVideoAction extends website_BlockAction
 		}
 		
 		// This block will be used for the detail page of all types of videos, so forward to the appropriate block.
-		$video = $this->getDocumentParameter();
+		$video = $this->getVideo();
 		if ($video instanceof videos_persistentdocument_dailymotionvideo)
 		{
 			$this->forward('videos', 'Dailymotionvideo');
