@@ -13,8 +13,9 @@ class videos_BlockPlaylistAction extends videos_BlockVideoAction
 		$plist = $this->getDocumentParameter(K::COMPONENT_ID_ACCESSOR, 'videos_persistentdocument_playlist');
 		if ($plist === null)
 		{
-			return null;
+			return website_BlockView::NONE;
 		}
+		
 		if ($plist->getPosition() === 'none')
 		{
 			$videoArray = $plist->getPublishedVideoArray();

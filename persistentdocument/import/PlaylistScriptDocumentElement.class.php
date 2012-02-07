@@ -20,4 +20,13 @@ class videos_PlaylistScriptDocumentElement extends import_ScriptDocumentElement
 	{
 		return f_persistentdocument_PersistentDocumentModel::getInstanceFromDocumentModelName('modules_videos/playlist');
 	}
+	
+	public function endProcess()
+	{
+		$document = $this->getPersistentDocument();
+		if ($document->getPublicationstatus() == 'DRAFT')
+		{
+			$document->activate();
+		}
+	}
 }

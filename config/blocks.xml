@@ -12,7 +12,7 @@
 			<parameter name="repeat" type="String" list-id="modules_videos/truefalse" />
 		</parameters>
 	</block>
-	<block type="modules_videos_playlist" icon="video-playlist" label="&amp;modules.videos.bo.general.Playlist-detail;" hidden="true">
+	<block type="modules_videos_playlist" icon="video-playlist" hidden="true">
 		<parameters>
 			<parameter name="videoWidth" type="Integer" />
 			<parameter name="videoHeight" type="Integer" />
@@ -24,6 +24,6 @@
 			<parameter name="repeat" type="String" list-id="modules_videos/truefalse" />
 		</parameters>
 	</block>
-	<block type="modules_videos_youtubevideo" icon="youtubevideo" label="&amp;modules.videos.bo.general.Playlist-detail;" hidden="true"  />
-	<block type="modules_videos_dailymotionvideo" icon="dailymotionvideo" label="&amp;modules.videos.bo.general.Playlist-detail;" hidden="true" />
+	<block type="modules_videos_youtubevideo" icon="youtubevideo" hidden="true"  />
+	<block type="modules_videos_dailymotionvideo" icon="dailymotionvideo" hidden="true" />
 </blocks>

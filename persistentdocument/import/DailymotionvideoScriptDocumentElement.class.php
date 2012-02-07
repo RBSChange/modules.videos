@@ -20,4 +20,13 @@ class videos_DailymotionvideoScriptDocumentElement extends import_ScriptDocument
 	{
 		return f_persistentdocument_PersistentDocumentModel::getInstanceFromDocumentModelName('modules_videos/dailymotionvideo');
 	}
+	
+	public function endProcess()
+	{
+		$document = $this->getPersistentDocument();
+		if ($document->getPublicationstatus() == 'DRAFT')
+		{
+			$document->activate();
+		}
+	}
 }

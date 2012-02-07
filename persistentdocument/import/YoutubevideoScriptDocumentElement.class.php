@@ -20,4 +20,13 @@ class videos_YoutubevideoScriptDocumentElement extends import_ScriptDocumentElem
 	{
 		return f_persistentdocument_PersistentDocumentModel::getInstanceFromDocumentModelName('modules_videos/youtubevideo');
 	}
+	
+	public function endProcess()
+	{
+		$document = $this->getPersistentDocument();
+		if ($document->getPublicationstatus() == 'DRAFT')
+		{
+			$document->activate();
+		}
+	}
 }

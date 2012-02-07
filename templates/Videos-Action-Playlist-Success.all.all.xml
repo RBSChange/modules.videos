@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
 	<channel>
-		<title tal:content="playlist/getLabel"/>
-		
+		<title>${playlist/getLabel}</title>
 		<tal:block tal:repeat="item playlist/getPublishedVideoArray">
 			<tal:block tal:condition="item/getImage">
 				<tal:block tal:define="global imageUrl php: MediaHelper::getPublicFormatedUrl(item.getImage())"/>
@@ -11,8 +10,8 @@
 				<tal:block tal:condition="defaultImage" tal:define="global imageUrl defaultImage"/>
 			</tal:block>				
 			<item>
-				<title tal:content="item/getLabel" />
-				<description tal:condition="item/getDescription" tal:content="item/getDescription" />
+				<title>${item/getLabel}
+				<description tal:condition="item/getDescription">${item/getDescription}</description>
 				<media:group>
 					<media:content tal:attributes="url item/getFileUrl"/>
 					<media:thumbnail tal:attributes="url imageUrl" />
