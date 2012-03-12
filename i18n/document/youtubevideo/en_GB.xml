@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <i18n baseKey="m.videos.document.youtubevideo" lcid="en_GB">
-  <key id="edition-form-title">YouTube video properties</key>
+  <key id="document-name">YouTube video</key>
   <key id="label">label</key>
   <key id="label-help">label</key>
   <key id="videoid">video identifier</key>

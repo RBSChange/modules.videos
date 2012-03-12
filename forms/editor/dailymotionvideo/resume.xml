@@ -10,6 +10,11 @@
 		<property name="iframeurl" type="iframe" height="420" labeli18n="modules.uixul.bo.doceditor.property.Label" />
 	</section>
 	
+	<section name="publication" linkedtab="publication" labeli18n="modules.uixul.bo.doceditor.section.Status" image="{IconsBase}/small/status.png">
+		<property name="status" labeli18n="modules.uixul.bo.doceditor.property.Status" />
+		<property name="workflow" labeli18n="modules.uixul.bo.doceditor.property.Workflow" />
+	</section>
+	
 	<section name="localization" linkedtab="localization" labeli18n="modules.uixul.bo.doceditor.section.Localization" image="{IconsBase}/small/translate.png">
 		<property name="languages" type="langs" labeli18n="modules.uixul.bo.doceditor.property.Languages"/>
 	</section>				
@@ -17,5 +22,10 @@
 	<section name="history" linkedtab="history" actiontexti18n="modules.uixul.bo.doceditor.section.action.View" labeli18n="modules.uixul.bo.doceditor.section.History" image="{IconsBase}/small/history.png">
 		<property name="modificationdate" labeli18n="modules.uixul.bo.doceditor.property.Modificationdate"/>
 	</section>
-					
+	
+	<section name="urlrewriting" linkedtab="redirect"
+		labeli18n="modules.uixul.bo.doceditor.section.urlrewriting" 
+		image="{IconsBase}/small/urlrewriting.png">
+		<property name="currenturl" labeli18n="modules.uixul.bo.doceditor.property.currenturl" class="link" />
+	</section>				
 </panel>

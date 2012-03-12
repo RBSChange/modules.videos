@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <i18n baseKey="m.videos.document.dailymotionvideo" lcid="en_GB">
-  <key id="edition-form-title">Dailymotion video properties</key>
+  <key id="document-name">Dailymotion video</key>
   <key id="label">label</key>
   <key id="label-help">label</key>
   <key id="videoid">video identifier</key>
