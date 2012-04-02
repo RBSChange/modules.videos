@@ -12,7 +12,7 @@ class videos_BlockVideoAction extends website_BlockAction
 	 */
 	public function execute($request, $response)
 	{
-		if ($this->isInBackoffice())
+		if ($this->isInBackofficeEdition())
 		{
 			$prefs = ModuleService::getInstance()->getPreferencesDocument('videos');
 			$style['width'] = $this->getParameter('videoWidth', $prefs->getVideoWidth()) . "px";
