@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <i18n baseKey="m.videos.bo.blocks.video" lcid="fr_FR">
   <key id="videowidth">largeur du lecteur</key>
+  <key id="videowidth-help">définir la largeur du lecteur</key>
   <key id="videoheight">hauteur du lecteur</key>
+  <key id="videoheight-help">définir la hauteur du lecteur</key>
   <key id="logo">logo</key>
+  <key id="logo-help">logo présent lorsque la vidéo n'a pas encore été lancée</key>
   <key id="icons">montrer icône de lecture</key>
+  <key id="icons-help">montrer l'icône de lecture</key>
   <key id="controlbar">barre de contrôle</key>
+  <key id="controlbar-help">positionner ou cacher la barre de contrôle</key>
   <key id="usefullscreen">permettre l'affichage en plein écran</key>
+  <key id="usefullscreen-help">permettre l'affichage en plein écran</key>
   <key id="autostart">démarrage automatique</key>
+  <key id="autostart-help">activer ou désactiver le démarrage automatique</key>
   <key id="repeat">répéter</key>
+  <key id="repeat-help">répéter la vidéo lorsqu'elle est terminée</key>
 </i18n>
