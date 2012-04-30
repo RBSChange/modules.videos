@@ -102,7 +102,7 @@ class videos_VideoService extends f_persistentdocument_DocumentService
 	 * @param array $allowedSections
 	 * @return array
 	 */
-	public function getResume($document, $forModuleName, $allowedSections)
+	public function getResume($document, $forModuleName, $allowedSections = null)
 	{
 		$data = parent::getResume($document, $forModuleName, $allowedSections);
 		$iframeUrl = LinkHelper::getUIActionLink('videos', 'DisplayVideoBo');
