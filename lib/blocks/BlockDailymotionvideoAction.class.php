@@ -16,7 +16,7 @@ class videos_BlockDailymotionvideoAction extends website_BlockAction
 		{
 			return website_BlockView::DUMMY;
 		}
-		$video = $this->getDocumentParameter(K::COMPONENT_ID_ACCESSOR, "videos_persistentdocument_dailymotionvideo");
+		$video = $this->getDocumentParameter(change_Request::DOCUMENT_ID, "videos_persistentdocument_dailymotionvideo");
 		if ($video === null || !$video->isPublished())
 		{
 			return website_BlockView::NONE;

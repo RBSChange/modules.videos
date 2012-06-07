@@ -10,7 +10,7 @@ class videos_BlockPlaylistAction extends videos_BlockVideoAction
 	 */
 	protected function getVideo()
 	{
-		$plist = $this->getDocumentParameter(K::COMPONENT_ID_ACCESSOR, 'videos_persistentdocument_playlist');
+		$plist = $this->getDocumentParameter(change_Request::DOCUMENT_ID, 'videos_persistentdocument_playlist');
 		if ($plist === null)
 		{
 			return null;

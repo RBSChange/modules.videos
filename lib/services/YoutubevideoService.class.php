@@ -97,7 +97,7 @@ class videos_YoutubevideoService extends f_persistentdocument_DocumentService
 		$youtubeVideo['getWidth'] = $prefs->getYoutubeWidth();
 		$youtubeVideo['getHeight'] = $prefs->getYoutubeHeight();
 		
-		$templateComponent = TemplateLoader::getInstance()->setpackagename('modules_videos')->setMimeContentType(K::HTML)->load('Videos-Block-Youtubevideo-Success');
+		$templateComponent = TemplateLoader::getInstance()->setpackagename('modules_videos')->setMimeContentType('html')->load('Videos-Block-Youtubevideo-Success');
 		$templateComponent->setAttribute('video', $youtubeVideo);
 		$content = $templateComponent->execute();
 		return $content;

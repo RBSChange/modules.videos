@@ -11,7 +11,7 @@ class videos_PlaylistSuccessView extends change_View
 	 */
 	public function _execute($context, $request)
 	{
-	    $this->setTemplateName('Videos-Action-Playlist-Success', K::XML);
+	    $this->setTemplateName('Videos-Action-Playlist-Success', 'xml');
         $this->setAttributes($request->getParameters());
 	}
 }

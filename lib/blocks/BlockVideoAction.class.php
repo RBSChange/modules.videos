@@ -69,6 +69,6 @@ class videos_BlockVideoAction extends website_BlockAction
 	 */
 	protected function getVideo()
 	{
-		return $this->getDocumentParameter(K::COMPONENT_ID_ACCESSOR, 'videos_persistentdocument_video');
+		return $this->getDocumentParameter(change_Request::DOCUMENT_ID, 'videos_persistentdocument_video');
 	}
 }

@@ -19,7 +19,7 @@ class videos_BlockYoutubevideoAction extends website_BlockAction
 		{
 			return website_BlockView::DUMMY;
 		}
-		$video = $this->getDocumentParameter(K::COMPONENT_ID_ACCESSOR, "videos_persistentdocument_youtubevideo");
+		$video = $this->getDocumentParameter(change_Request::DOCUMENT_ID, "videos_persistentdocument_youtubevideo");
 		if ($video === null || !$video->isPublished())
 		{
 			return website_BlockView::NONE;

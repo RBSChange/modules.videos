@@ -11,7 +11,7 @@ class videos_PlaylistAction extends change_Action
 	 */
 	public function _execute($context, $request)
 	{
-		$id = $request->getModuleParameter('videos', K::COMPONENT_ID_ACCESSOR);
+		$id = $request->getModuleParameter('videos', change_Request::DOCUMENT_ID);
 		
 		$playlist = DocumentHelper::getDocumentInstance($id);		
 		if ($playlist !== null)

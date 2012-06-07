@@ -10,6 +10,6 @@ class videos_persistentdocument_playlist extends videos_persistentdocument_playl
 	 */
 	public function getFileUrl()
 	{
-		return LinkHelper::getActionUrl('videos', 'Playlist', array(K::COMPONENT_ID_ACCESSOR => $this->getId()));
+		return LinkHelper::getActionUrl('videos', 'Playlist', array(change_Request::DOCUMENT_ID => $this->getId()));
 	}   
 }
