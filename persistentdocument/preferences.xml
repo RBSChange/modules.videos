@@ -1,51 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document xmlns="http://www.rbs.fr/schema/change-document/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rbs.fr/schema/change-document/1.0 http://www.rbschange.fr/static/schema/change-document/1.0.xsd" model-version="1.0" icon="videos" publish-on-day-change="false" backoffice-indexable="false" has-url="false">
-  <properties>
-    <add name="label" default-value="preferences"/>
-    <add name="videoWidth" type="String" min-occurs="1" default-value="320">
-      <constraints>integer:true</constraints>
-    </add>
-    <add name="videoHeight" type="String" min-occurs="1" default-value="240">
-      <constraints>integer:true</constraints>
-    </add>
-    <add name="autostart" type="String" min-occurs="1" from-list="modules_videos/truefalse" default-value="false"/>
-    <add name="repeat" type="Boolean"/>
-<!-- Colors -->
-    <add name="backcolor" type="String"/>
-    <add name="frontcolor" type="String"/>
-    <add name="lightcolor" type="String"/>
-    <add name="screencolor" type="String"/>
-<!-- Display appearance -->
-    <add name="logo" type="modules_media/media"/>
-    <add name="image" type="modules_media/media"/>
-    <add name="icons" type="String" min-occurs="1" from-list="modules_videos/truefalse" default-value="true"/>
-    <add name="controlbar" type="String" min-occurs="1" from-list="modules_videos/controlbar" default-value="bottom"/>
-    <add name="usefullscreen" type="String" min-occurs="1" from-list="modules_videos/truefalse" default-value="true"/>
-<!-- Dailymotion properties -->
-    <add name="dailyWidth" type="String" min-occurs="1" default-value="480">
-      <constraints>integer:true</constraints>
-    </add>
-    <add name="dailyHeight" type="String" min-occurs="1" default-value="414">
-      <constraints>integer:true</constraints>
-    </add>
-    <add name="background" type="String" default-value="#DEDEDE"/>
-    <add name="glow" type="String" default-value="#FFFFFF"/>
-    <add name="foreground" type="String" default-value="#333333"/>
-    <add name="special" type="String" default-value="#FFC300"/>
-    <add name="dailyAutoPlay" type="Boolean" default-value="false"/>
-<!-- YouTube properties -->
-    <add name="youtubeWidth" type="String" min-occurs="1" default-value="480">
-      <constraints>integer:true</constraints>
-    </add>
-    <add name="youtubeHeight" type="String" min-occurs="1" default-value="385">
-      <constraints>integer:true</constraints>
-    </add>
-    <add name="color1" type="String"/>
-    <add name="color2" type="String"/>
-    <add name="fs" type="Boolean" default-value="true"/>
-    <add name="border" type="Boolean" default-value="false"/>
-    <add name="youtubeAutoPlay" type="Boolean" default-value="false"/>
-    <add name="dailymotionhighlight" type="String" default-value="#FFC300"/>
-  </properties>
-  <statuses default="PUBLICATED"/>
+<document xmlns="http://www.rbs.fr/schema/change-document/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.rbs.fr/schema/change-document/1.0 http://www.rbschange.fr/static/schema/change-document/4.0.xsd"
+	model-version="1.0" icon="videos" publish-on-day-change="false" backoffice-indexable="false" has-url="false">
+	<properties>
+		<property name="label" default-value="preferences" />
+		<property name="videoWidth" type="String" min-occurs="1" default-value="320">
+			<constraint name="integer" />
+		</property>
+		<property name="videoHeight" type="String" min-occurs="1" default-value="240">
+			<constraint name="integer" />
+		</property>
+		<property name="autostart" type="String" min-occurs="1" from-list="modules_videos/truefalse" default-value="false" />
+		<property name="repeat" type="Boolean" />
+		<!-- Colors -->
+		<property name="backcolor" type="String" />
+		<property name="frontcolor" type="String" />
+		<property name="lightcolor" type="String" />
+		<property name="screencolor" type="String" />
+		<!-- Display appearance -->
+		<property name="logo" type="modules_media/media" />
+		<property name="image" type="modules_media/media" />
+		<property name="icons" type="String" min-occurs="1" from-list="modules_videos/truefalse" default-value="true" />
+		<property name="controlbar" type="String" min-occurs="1" from-list="modules_videos/controlbar" default-value="bottom" />
+		<property name="usefullscreen" type="String" min-occurs="1" from-list="modules_videos/truefalse" default-value="true" />
+		<!-- Dailymotion properties -->
+		<property name="dailyWidth" type="String" min-occurs="1" default-value="480">
+			<constraint name="integer" />
+		</property>
+		<property name="dailyHeight" type="String" min-occurs="1" default-value="414">
+			<constraint name="integer" />
+		</property>
+		<property name="background" type="String" default-value="#DEDEDE" />
+		<property name="glow" type="String" default-value="#FFFFFF" />
+		<property name="foreground" type="String" default-value="#333333" />
+		<property name="special" type="String" default-value="#FFC300" />
+		<property name="dailyAutoPlay" type="Boolean" default-value="false" />
+		<!-- YouTube properties -->
+		<property name="youtubeWidth" type="String" min-occurs="1" default-value="480">
+			<constraint name="integer" />
+		</property>
+		<property name="youtubeHeight" type="String" min-occurs="1" default-value="385">
+			<constraint name="integer" />
+		</property>
+		<property name="color1" type="String" />
+		<property name="color2" type="String" />
+		<property name="fs" type="Boolean" default-value="true" />
+		<property name="border" type="Boolean" default-value="false" />
+		<property name="youtubeAutoPlay" type="Boolean" default-value="false" />
+		<property name="dailymotionhighlight" type="String" default-value="#FFC300" />
+	</properties>
+	<statuses default="PUBLICATED" />
 </document>

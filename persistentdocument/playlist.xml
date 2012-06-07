@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <document xmlns="http://www.rbs.fr/schema/change-document/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.rbs.fr/schema/change-document/1.0 http://www.rbschange.fr/static/schema/change-document/1.0.xsd"
+	xsi:schemaLocation="http://www.rbs.fr/schema/change-document/1.0 http://www.rbschange.fr/static/schema/change-document/4.0.xsd"
 	model-version="1.0" icon="video-playlist" has-url="false">
 	<properties>
-		<add name="label" type="String" min-occurs="1" max-occurs="1" localized="true" />
-		<add name="video" type="modules_videos/video" min-occurs="1" max-occurs="-1" />
-		<add name="position" type="String" min-occurs="1" max-occurs="1" from-list="modules_videos/playlistposition" />
-		<add name="startpublicationdate" localized="true" />
-		<add name="endpublicationdate" localized="true" />
-		<add name="publicationstatus" localized="true" />
+		<property name="label" type="String" min-occurs="1" localized="true" />
+		<property name="video" type="modules_videos/video" min-occurs="1" max-occurs="-1" />
+		<property name="position" type="String" min-occurs="1" from-list="modules_videos/playlistposition" />
+		<property name="startpublicationdate" localized="true" />
+		<property name="endpublicationdate" localized="true" />
+		<property name="publicationstatus" localized="true" />
 	</properties>
 </document>
