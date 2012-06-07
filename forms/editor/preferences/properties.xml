@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <panel>
 	<section labeli18n="m.videos.document.preferences.edition-form-title">
-		<field name="width" size="5"/>
-		<field name="height" size="5"/>
+		<field name="videoWidth" size="5"/>
+		<field name="videoHeight" size="5"/>
 		<field name="autostart" />
 		<field name="repeat" />
 	</section>

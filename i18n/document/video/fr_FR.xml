@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <i18n baseKey="m.videos.document.video" lcid="fr_FR">
-  <key id="document-name">vidéo</key>
-  <key id="label">libellé</key>
-  <key id="label-help">libellé</key>
-  <key id="file">fichier</key>
-  <key id="file-help">fichier de la vidéo. Doit être au format FLV.</key>
-  <key id="description">description</key>
-  <key id="image">image</key>
-  <key id="startpublicationdate">date de début de parution</key>
-  <key id="startpublicationdate-help">date de début de parution</key>
-  <key id="endpublicationdate">date de fin de parution</key>
-  <key id="endpublicationdate-help">date de fin de parution</key>
+	<key id="document-name">vidéo</key>
+	<key id="label">libellé</key>
+	<key id="label-help">libellé</key>
+	<key id="file">fichier</key>
+	<key id="file-help">fichier de la vidéo. Doit être au format FLV.</key>
+	<key id="description">description</key>
+	<key id="image">image</key>
+	<key id="startpublicationdate">date de début de parution</key>
+	<key id="startpublicationdate-help">date de début de parution</key>
+	<key id="endpublicationdate">date de fin de parution</key>
+	<key id="endpublicationdate-help">date de fin de parution</key>
 </i18n>

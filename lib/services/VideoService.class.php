@@ -63,8 +63,6 @@ class videos_VideoService extends f_persistentdocument_DocumentService
 	}
 	
 	/**
-	 * Mise à jour des informations des medias attaché à la
-	 *
 	 * @param videos_persistentdocument_video $document
 	 * @param media_persistentdocument_media $media
 	 */

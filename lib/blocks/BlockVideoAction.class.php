@@ -8,11 +8,11 @@ class videos_BlockVideoAction extends website_BlockAction
 	/**
 	 * @param f_mvc_Request $request
 	 * @param f_mvc_Response $response
-	 * @return String
+	 * @return string
 	 */
-	function execute($request, $response)
+	public function execute($request, $response)
 	{
-		if ($this->isInBackoffice())
+		if ($this->isInBackofficeEdition())
 		{
 			$prefs = ModuleService::getInstance()->getPreferencesDocument('videos');
 			$style['width'] = $this->getParameter('videoWidth', $prefs->getVideoWidth()) . "px";
@@ -24,7 +24,7 @@ class videos_BlockVideoAction extends website_BlockAction
 		}
 		
 		// This block will be used for the detail page of all types of videos, so forward to the appropriate block.
-		$video = $this->getDocumentParameter();
+		$video = $this->getVideo();
 		if ($video instanceof videos_persistentdocument_dailymotionvideo)
 		{
 			$this->forward('videos', 'Dailymotionvideo');
@@ -35,7 +35,7 @@ class videos_BlockVideoAction extends website_BlockAction
 			$this->forward('videos', 'Youtubevideo');
 			return website_BlockView::NONE;
 		}
-		elseif (!($video instanceof videos_persistentdocument_video) || !$video->isPublished())
+		elseif ((!($video instanceof videos_persistentdocument_video) && !($video instanceof videos_persistentdocument_playlist)) || !$video->isPublished())
 		{
 			return website_BlockView::NONE;
 		}
@@ -65,10 +65,10 @@ class videos_BlockVideoAction extends website_BlockAction
 	}
 	
 	/**
-	 * @deprecated
+	 * @return f_persistentdocument_PersistentDocument
 	 */
 	protected function getVideo()
 	{
-		return $this->getDocumentParameter(change_Request::DOCUMENT_ID, 'videos_persistentdocument_video');
+		return $this->getDocumentParameter();
 	}
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <i18n baseKey="m.videos.document.youtubevideo" lcid="fr_FR">
-  <key id="edition-form-title">propriétés d'une vidéo YouTube</key>
-  <key id="label">libellé</key>
-  <key id="label-help">libellé</key>
-  <key id="videoid">identifiant de la vidéo</key>
-  <key id="videoid-help">ex: IpQ9RESJnWM</key>
-  <key id="exctract-id">extraire l'identifiant de l'URL</key>
-  <key id="set-permalink">Saisissez l'URL de la vidéo. Celle-ci peut être récupérée sur la page de la vidéo sur YouTube.</key>
-  <key id="bad-link">Le lien que vous venez de saisir n'est pas valide.</key>
+	<key id="document-name">vidéo YouTube</key>
+	<key id="label">libellé</key>
+	<key id="label-help">libellé</key>
+	<key id="videoid">identifiant de la vidéo</key>
+	<key id="videoid-help">ex: IpQ9RESJnWM</key>
+	<key id="exctract-id">extraire l'identifiant de l'URL</key>
+	<key id="set-permalink">Saisissez l'URL de la vidéo. Celle-ci peut être récupérée sur la page de la vidéo sur YouTube.</key>
+	<key id="bad-link">Le lien que vous venez de saisir n'est pas valide.</key>
 </i18n>
