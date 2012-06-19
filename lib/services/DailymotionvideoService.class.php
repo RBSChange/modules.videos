@@ -1,28 +1,10 @@
 <?php
 /**
- * @date Mon, 02 Mar 2009 13:37:28 +0000
- * @author intarand
- * @package 
+ * @package modules.videos
+ * @method videos_DailymotionvideoService getInstance() 
  */
 class videos_DailymotionvideoService extends f_persistentdocument_DocumentService
 {
-	/**
-	 * @var videos_DailymotionvideoService
-	 */
-	private static $instance;
-
-	/**
-	 * @return videos_DailymotionvideoService
-	 */
-	public static function getInstance()
-	{
-		if (self::$instance === null)
-		{
-			self::$instance = self::getServiceClassInstance(get_class());
-		}
-		return self::$instance;
-	}
-
 	/**
 	 * @return videos_persistentdocument_dailymotionvideo
 	 */

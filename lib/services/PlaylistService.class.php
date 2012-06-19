@@ -1,28 +1,10 @@
 <?php
 /**
- * @date Thu, 26 Feb 2009 11:28:04 +0000
- * @author intarand
- * @package 
+ * @package modules.videos
+ * @method videos_PlaylistService getInstance() 
  */
 class videos_PlaylistService extends f_persistentdocument_DocumentService
 {
-	/**
-	 * @var videos_PlaylistService
-	 */
-	private static $instance;
-
-	/**
-	 * @return videos_PlaylistService
-	 */
-	public static function getInstance()
-	{
-		if (self::$instance === null)
-		{
-			self::$instance = self::getServiceClassInstance(get_class());
-		}
-		return self::$instance;
-	}
-
 	/**
 	 * @return videos_persistentdocument_playlist
 	 */

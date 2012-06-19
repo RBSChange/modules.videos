@@ -1,28 +1,10 @@
 <?php
 /**
- * @date Tue, 03 Mar 2009 13:03:59 +0000
- * @author intarand
- * @package 
+ * @package modules.videos
+ * @method videos_YoutubevideoService getInstance()  
  */
 class videos_YoutubevideoService extends f_persistentdocument_DocumentService
 {
-	/**
-	 * @var videos_YoutubevideoService
-	 */
-	private static $instance;
-	
-	/**
-	 * @return videos_YoutubevideoService
-	 */
-	public static function getInstance()
-	{
-		if (self::$instance === null)
-		{
-			self::$instance = self::getServiceClassInstance(get_class());
-		}
-		return self::$instance;
-	}
-	
 	/**
 	 * @return videos_persistentdocument_youtubevideo
 	 */
@@ -40,7 +22,6 @@ class videos_YoutubevideoService extends f_persistentdocument_DocumentService
 		return $this->pp->createQuery('modules_videos/youtubevideo');
 	}
 	
-
 	/**
 	 * @param f_persistentdocument_PersistentDocument $document
 	 * @param string $forModuleName
