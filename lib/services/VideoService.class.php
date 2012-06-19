@@ -1,21 +1,10 @@
 <?php
+/**
+ * @package modules.videos
+ * @method videos_VideoService getInstance()
+ */
 class videos_VideoService extends f_persistentdocument_DocumentService
 {
-	private static $instance = null;
-	
-	/**
-	 * @return videos_VideoService
-	 */
-	public static function getInstance()
-	{
-		if (is_null(self::$instance))
-		{
-			$className = get_class();
-			self::$instance = new $className();
-		}
-		return self::$instance;
-	}
-	
 	/**
 	 * @return videos_persistentdocument_video
 	 */
@@ -30,12 +19,12 @@ class videos_VideoService extends f_persistentdocument_DocumentService
 	 */
 	public function createQuery()
 	{
-		return $this->pp->createQuery('modules_videos/video');
+		return $this->getPersistentProvider()->createQuery('modules_videos/video');
 	}
 	
 	/**
 	 * @param videos_persistentdocument_video $document
-	 * @param Integer $parentNodeId Parent node ID where to save the document (optionnal => can be null !).
+	 * @param integer $parentNodeId Parent node ID where to save the document (optionnal => can be null !).
 	 * @return void
 	 */
 	protected function preSave($document, $parentNodeId)
@@ -180,7 +169,7 @@ class videos_VideoService extends f_persistentdocument_DocumentService
 			{
 				$methodName = 'get' . ucfirst($propertyName);
 				$value = $prefs->$methodName();
-				if (is_string($value) && preg_match("/\|#([a-f0-9]{6})/i", $value, $matches))
+				if (is_string($value) && preg_match('/\|#([a-f0-9]{6})/i', $value, $matches))
 				{
 					$value = '0x' . $matches[1];
 				}

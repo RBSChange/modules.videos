@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <blocks>
 	<block type="modules_videos_video" icon="video" labeli18n="m.videos.bo.general.video-detail">
 		<parameters>
@@ -24,6 +24,6 @@
 			<parameter name="repeat" type="String" list-id="modules_videos/truefalse" />
 		</parameters>
 	</block>
-	<block type="modules_videos_youtubevideo" icon="youtubevideo" hidden="true"  />
+	<block type="modules_videos_youtubevideo" icon="youtubevideo" hidden="true" />
 	<block type="modules_videos_dailymotionvideo" icon="dailymotionvideo" hidden="true" />
 </blocks>

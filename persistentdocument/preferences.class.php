@@ -8,7 +8,7 @@ class videos_persistentdocument_preferences extends videos_persistentdocument_pr
 	/**
 	 * @see f_persistentdocument_PersistentDocumentImpl::getLabel()
 	 *
-	 * @return String
+	 * @return string
 	 */
 	public function getLabel()
 	{
@@ -31,7 +31,7 @@ class videos_persistentdocument_preferences extends videos_persistentdocument_pr
 	}
 	
 	/**
-	 * @return String
+	 * @return string
 	 */
 	public function getCleanBackColor()
 	{
@@ -39,7 +39,7 @@ class videos_persistentdocument_preferences extends videos_persistentdocument_pr
 	}
 	
 	/**
-	 * @return String
+	 * @return string
 	 */
 	public function getCleanBackground()
 	{
@@ -47,7 +47,7 @@ class videos_persistentdocument_preferences extends videos_persistentdocument_pr
 	}
 	
 	/**
-	 * @return String
+	 * @return string
 	 */
 	public function getBackgroundForDailyMotion()
 	{
@@ -55,7 +55,7 @@ class videos_persistentdocument_preferences extends videos_persistentdocument_pr
 	}
 	
 	/**
-	 * @return String
+	 * @return string
 	 */
 	public function getCleanGlow()
 	{
@@ -63,7 +63,7 @@ class videos_persistentdocument_preferences extends videos_persistentdocument_pr
 	}
 	
 	/**
-	 * @return String
+	 * @return string
 	 */
 	public function getGlowForDailyMotion()
 	{
@@ -71,7 +71,7 @@ class videos_persistentdocument_preferences extends videos_persistentdocument_pr
 	}
 	
 	/**
-	 * @return String
+	 * @return string
 	 */
 	public function getCleanForeground()
 	{
@@ -79,7 +79,7 @@ class videos_persistentdocument_preferences extends videos_persistentdocument_pr
 	}
 	
 	/**
-	 * @return String
+	 * @return string
 	 */
 	public function getForegroundForDailyMotion()
 	{
@@ -87,7 +87,7 @@ class videos_persistentdocument_preferences extends videos_persistentdocument_pr
 	}
 	
 	/**
-	 * @return String
+	 * @return string
 	 */
 	public function getCleanSpecial()
 	{
@@ -95,7 +95,7 @@ class videos_persistentdocument_preferences extends videos_persistentdocument_pr
 	}
 	
 	/**
-	 * @return String
+	 * @return string
 	 */
 	public function getSpecialForDailyMotion()
 	{
@@ -103,7 +103,7 @@ class videos_persistentdocument_preferences extends videos_persistentdocument_pr
 	}
 	
 	/**
-	 * @return String
+	 * @return string
 	 */
 	public function getHighlightForDailymotion()
 	{
@@ -111,7 +111,7 @@ class videos_persistentdocument_preferences extends videos_persistentdocument_pr
 	}
 	
 	/**
-	 * @return String
+	 * @return string
 	 */
 	public function getCleanColor1()
 	{
@@ -119,7 +119,7 @@ class videos_persistentdocument_preferences extends videos_persistentdocument_pr
 	}
 	
 	/**
-	 * @return String
+	 * @return string
 	 */
 	public function getCleanColor2()
 	{
@@ -127,8 +127,8 @@ class videos_persistentdocument_preferences extends videos_persistentdocument_pr
 	}
 	
 	/**
-	 * @param String $color
-	 * @return String
+	 * @param string $color
+	 * @return string
 	 */
 	private function cleanColor($color)
 	{

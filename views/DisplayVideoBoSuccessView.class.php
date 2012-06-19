@@ -11,7 +11,7 @@ class videos_DisplayVideoBoSuccessView extends change_View
 	 */
 	public function _execute($context, $request)
 	{
-	    $this->setTemplateName('Video-Success');
-        $this->setAttributes($request->getParameters());
+		$this->setTemplateName('Video-Success');
+		$this->setAttributes($request->getParameters());
 	}
 }

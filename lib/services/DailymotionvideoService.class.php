@@ -19,7 +19,7 @@ class videos_DailymotionvideoService extends f_persistentdocument_DocumentServic
 	 */
 	public function createQuery()
 	{
-		return $this->pp->createQuery('modules_videos/dailymotionvideo');
+		return $this->getPersistentProvider()->createQuery('modules_videos/dailymotionvideo');
 	}
 
 	/**

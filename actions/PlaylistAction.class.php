@@ -28,7 +28,7 @@ class videos_PlaylistAction extends change_Action
 	}
 		
 	/**
-	 * @return Boolean
+	 * @return boolean
 	 */
 	public function isSecure()
 	{

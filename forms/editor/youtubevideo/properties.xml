@@ -2,6 +2,6 @@
 <panel>
 	<section labeli18n="m.uixul.bo.doceditor.fieldsgroup.title">
 		<field name="label" />
-		<field name="videoId" type="youtubevideoid"  />
+		<field name="videoId" type="youtubevideoid" />
 	</section>
 </panel>

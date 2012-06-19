@@ -11,7 +11,7 @@ class videos_DisplayDailymotionVideoBoSuccessView extends change_View
 	 */
 	public function _execute($context, $request)
 	{
-	    $this->setTemplateName('YoutubeVideo-Success');	    
-        $this->setAttributes($request->getParameters());
+		$this->setTemplateName('YoutubeVideo-Success');		
+		$this->setAttributes($request->getParameters());
 	}
 }

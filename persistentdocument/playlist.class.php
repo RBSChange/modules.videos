@@ -6,7 +6,7 @@
 class videos_persistentdocument_playlist extends videos_persistentdocument_playlistbase 
 {
 	/**
-	 * @return String
+	 * @return string
 	 */
 	public function getFileUrl()
 	{

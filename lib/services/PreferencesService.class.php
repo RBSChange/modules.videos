@@ -1,25 +1,10 @@
 <?php
 /**
- * @date Fri, 22 Jun 2007 17:40:42 +0200
- * @author intportg
+ * @package modules.videos
+ * @method videos_PreferencesService getInstance() 
  */
 class videos_PreferencesService extends f_persistentdocument_DocumentService
 {
-	private static $instance = null;
-
-	/**
-	 * @return videos_PreferencesService
-	 */
-	public static function getInstance()
-	{
-		if (is_null(self::$instance))
-		{
-			$className = get_class();
-			self::$instance = new $className();
-		}
-		return self::$instance;
-	}
-
 	/**
 	 * @return videos_persistentdocument_preferences
 	 */
@@ -30,7 +15,7 @@ class videos_PreferencesService extends f_persistentdocument_DocumentService
 
 	/**
 	 * @param videos_persistentdocument_preferences $document
-	 * @param Integer $parentNodeId Parent node ID where to save the document (optionnal => can be null !).
+	 * @param integer $parentNodeId Parent node ID where to save the document (optionnal => can be null !).
 	 * @return void
 	 */
 	protected function preSave($document, $parentNodeId)

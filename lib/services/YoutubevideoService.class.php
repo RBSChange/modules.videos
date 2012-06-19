@@ -19,7 +19,7 @@ class videos_YoutubevideoService extends f_persistentdocument_DocumentService
 	 */
 	public function createQuery()
 	{
-		return $this->pp->createQuery('modules_videos/youtubevideo');
+		return $this->getPersistentProvider()->createQuery('modules_videos/youtubevideo');
 	}
 	
 	/**

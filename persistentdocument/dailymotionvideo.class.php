@@ -6,7 +6,7 @@
 class videos_persistentdocument_dailymotionvideo extends videos_persistentdocument_dailymotionvideobase 
 {
 	/**
-	 * @return String
+	 * @return string
 	 */
 	public function getUrl()
 	{

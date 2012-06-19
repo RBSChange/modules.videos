@@ -6,7 +6,7 @@
 class videos_persistentdocument_youtubevideo extends videos_persistentdocument_youtubevideobase
 {
 	/**
-	 * @return String
+	 * @return string
 	 */
 	public function getUrl()
 	{
