@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.videos.bo.blocks.video" lcid="en_GB">
-  <key id="videoWidth">player width</key>
-  <key id="videoHeight">player height</key>
-  <key id="logo">logo</key>
-  <key id="icons">show play icon</key>
-  <key id="controlbar">show controls</key>
-  <key id="usefullscreen">full screen</key>
-  <key id="autostart">autostart</key>
-  <key id="repeat">repeat</key>
+	<key id="videowidth">player width</key>
+	<key id="videoheight">player height</key>
+	<key id="logo">logo</key>
+	<key id="icons">show play icon</key>
+	<key id="controlbar">show controls</key>
+	<key id="usefullscreen">full screen</key>
+	<key id="autostart">autostart</key>
+	<key id="repeat">repeat</key>
 </i18n>

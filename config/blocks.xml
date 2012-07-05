@@ -4,24 +4,24 @@
 		<parameters>
 			<parameter name="videoWidth" type="Integer" />
 			<parameter name="videoHeight" type="Integer" />
-			<parameter name="logo" type="modules_media/media" />
-			<parameter name="icons" type="String" list-id="modules_videos/truefalse" />
-			<parameter name="controlbar" type="String" list-id="modules_videos/controlbar" />
-			<parameter name="usefullscreen" type="String" list-id="modules_videos/truefalse" />
-			<parameter name="autostart" type="String" list-id="modules_videos/truefalse" />
-			<parameter name="repeat" type="String" list-id="modules_videos/truefalse" />
+			<parameter name="logo" type="Document" document-type="modules_media/media" />
+			<parameter name="icons" type="String" from-list="modules_videos/truefalse" />
+			<parameter name="controlbar" type="String" from-list="modules_videos/controlbar" />
+			<parameter name="usefullscreen" type="String" from-list="modules_videos/truefalse" />
+			<parameter name="autostart" type="String" from-list="modules_videos/truefalse" />
+			<parameter name="repeat" type="String" from-list="modules_videos/truefalse" />
 		</parameters>
 	</block>
 	<block type="modules_videos_playlist" icon="video-playlist" hidden="true">
 		<parameters>
 			<parameter name="videoWidth" type="Integer" />
 			<parameter name="videoHeight" type="Integer" />
-			<parameter name="logo" type="modules_media/media" />
-			<parameter name="icons" type="String" list-id="modules_videos/truefalse" />
-			<parameter name="controlbar" type="String" list-id="modules_videos/controlbar" />
-			<parameter name="usefullscreen" type="String" list-id="modules_videos/truefalse" />
-			<parameter name="autostart" type="String" list-id="modules_videos/truefalse" />
-			<parameter name="repeat" type="String" list-id="modules_videos/truefalse" />
+			<parameter name="logo" type="Document" document-type="modules_media/media" />
+			<parameter name="icons" type="String" from-list="modules_videos/truefalse" />
+			<parameter name="controlbar" type="String" from-list="modules_videos/controlbar" />
+			<parameter name="usefullscreen" type="String" from-list="modules_videos/truefalse" />
+			<parameter name="autostart" type="String" from-list="modules_videos/truefalse" />
+			<parameter name="repeat" type="String" from-list="modules_videos/truefalse" />
 		</parameters>
 	</block>
 	<block type="modules_videos_youtubevideo" icon="youtubevideo" hidden="true" />

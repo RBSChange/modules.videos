@@ -133,7 +133,9 @@ class videos_VideoService extends f_persistentdocument_DocumentService
 		$player['getUsefullscreen'] = $prefs->getUsefullscreen();
 		$player['getFlashvars'] = implode('&', $this->getFlashvars(null, $prefs, $document));
 		
-		$templateComponent = TemplateLoader::getInstance()->setpackagename('modules_videos')->setMimeContentType('html')->load('Videos-Block-Video-Success');
+		$templateComponent = change_TemplateLoader::getNewInstance()->setExtension('html')
+			->load('modules', 'videos', 'templates', 'Videos-Block-Video-Success');
+		
 		$templateComponent->setAttribute('video', $video);
 		$templateComponent->setAttribute('player', $player);
 		$content = $templateComponent->execute();

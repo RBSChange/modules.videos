@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.videos.document.playlist" lcid="de_DE">
-  <key id="startpublicationdate">Publikationanfangsdatum</key>
-  <key id="startpublicationdate-help">Publikationanfangsdatum</key>
-  <key id="endpublicationdate">Publikationsendedatum</key>
-  <key id="endpublicationdate-help">Publikationsendedatum</key>
+	<key id="startpublicationdate">Publikationanfangsdatum</key>
+	<key id="startpublicationdate-help">Publikationanfangsdatum</key>
+	<key id="endpublicationdate">Publikationsendedatum</key>
+	<key id="endpublicationdate-help">Publikationsendedatum</key>
 </i18n>

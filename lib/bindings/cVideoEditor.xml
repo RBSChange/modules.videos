@@ -13,14 +13,14 @@
 					</xul:toolbar>
 				</xul:hbox>
 				<xul:hbox>
-					<xul:button label="${transui:m.videos.document.youtubevideo.Exctract-id,ucf,etc,attr}" oncommand="extractPermalink()"
+					<xul:button label="${trans:m.videos.document.youtubevideo.exctract-id,ucf,etc,attr}" oncommand="extractPermalink()"
 						image="{IconsBase}/small/funnel.png" />
 					<xul:spacer flex="1" />
 				</xul:hbox>
 			</xul:vbox>
 		</content>
 		<implementation>
-			<field name="promptLabel">"${transui:m.videos.document.youtubevideo.set-permalink,ucf,js}"</field>
+			<field name="promptLabel">"${trans:m.videos.document.youtubevideo.set-permalink,ucf,js}"</field>
 			<method name="extractPermalink">
 				<body><![CDATA[
 					var permaLink = prompt(this.promptLabel);
@@ -54,7 +54,7 @@
 						return;
 					}
 					
-					alert("${transui:m.videos.document.youtubevideo.bad-link,ucf,js}");
+					alert("${trans:m.videos.document.youtubevideo.bad-link,ucf,js}");
 				]]></body>
 			</method>
 		</implementation>
@@ -62,7 +62,7 @@
 
 	<binding id="cDailymotionVideoId" extends="modules.videos.cVideoEditor#cYoutubeVideoId">
 		<implementation>
-			<field name="promptLabel">"${transui:m.videos.document.dailymotionvideo.set-permalink,ucf,js}"</field>
+			<field name="promptLabel">"${trans:m.videos.document.dailymotionvideo.set-permalink,ucf,js}"</field>
 			<method name="extract">
 				<parameter name="permaLink" />
 				<body><![CDATA[
@@ -73,7 +73,7 @@
 						}
 						else
 						{
-							alert("${transui:m.videos.document.dailymotionvideo.bad-link,ucf,js}");
+							alert("${trans:m.videos.document.dailymotionvideo.bad-link,ucf,js}");
 						}	
 				]]></body>
 			</method>

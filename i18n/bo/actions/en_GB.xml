@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.videos.bo.actions" lcid="en_GB">
-  <key id="create_">create...</key>
-  <key id="create-video">create video</key>
-  <key id="preview">video preview</key>
-  <key id="create-playlist">create playlist</key>
-  <key id="create-dailymotionvideo">create dailymotion video</key>
-  <key id="create-youtubevideo">create youtube video</key>
+	<key id="create_">create...</key>
+	<key id="create-video">create video</key>
+	<key id="preview">video preview</key>
+	<key id="create-playlist">create playlist</key>
+	<key id="create-dailymotionvideo">create dailymotion video</key>
+	<key id="create-youtubevideo">create youtube video</key>
 </i18n>

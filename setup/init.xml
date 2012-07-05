@@ -2,35 +2,30 @@
 <script>
 	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
 	<binding fileName="modules/videos/persistentdocument/import/videos_binding.xml" />
-
 	<systemfolder module="list" relatedmodule="videos">
-		<staticlist listid="modules_videos/overstretch" label="&amp;modules.videos.document.video.overstretch;" description="&amp;modules.videos.document.video.overstretch;">
-			<staticitem label="&amp;modules.videos.bo.general.false;" value="false" />
-			<staticitem label="&amp;modules.videos.bo.general.true;" value="true" />
-			<staticitem label="&amp;modules.videos.bo.general.fit;" value="fit" />
-			<staticitem label="&amp;modules.videos.bo.general.none;" value="none" />
+		<staticlist listid="modules_videos/overstretch" label="m.videos.document.video.overstretch" description="m.videos.document.video.overstretch">
+			<staticitem label="m.videos.bo.general.false" value="false" />
+			<staticitem label="m.videos.bo.general.true" value="true" />
+			<staticitem label="m.videos.bo.general.fit" value="fit" />
+			<staticitem label="m.videos.bo.general.none" value="none" />
 		</staticlist>
-
-		<staticlist listid="modules_videos/truefalse" label="&amp;modules.videos.bo.general.truefalse;" description="&amp;modules.videos.bo.general.truefalse;">
-			<staticitem label="&amp;modules.videos.bo.general.false;" value="false" />
-			<staticitem label="&amp;modules.videos.bo.general.true;" value="true" />
+		<staticlist listid="modules_videos/truefalse" label="m.videos.bo.general.truefalse" description="m.videos.bo.general.truefalse">
+			<staticitem label="m.videos.bo.general.false" value="false" />
+			<staticitem label="m.videos.bo.general.true" value="true" />
 		</staticlist>
-		
-		<staticlist listid="modules_videos/playlistposition" label="&amp;modules.videos.bo.general.Playlist-position;" description="&amp;modules.videos.bo.general.Playlist-position;">
-			<staticitem label="&amp;modules.videos.bo.general.Playlist-none;" value="none" />
-			<staticitem label="&amp;modules.videos.bo.general.Playlist-bottom;" value="bottom" />
-			<staticitem label="&amp;modules.videos.bo.general.Playlist-right;" value="right" />
-			<staticitem label="&amp;modules.videos.bo.general.Playlist-over;" value="over" />
+		<staticlist listid="modules_videos/playlistposition" label="m.videos.bo.general.playlist-position" description="m.videos.bo.general.playlist-position">
+			<staticitem label="m.videos.bo.general.playlist-none" value="none" />
+			<staticitem label="m.videos.bo.general.playlist-bottom" value="bottom" />
+			<staticitem label="m.videos.bo.general.playlist-right" value="right" />
+			<staticitem label="m.videos.bo.general.playlist-over" value="over" />
 		</staticlist>
-		
-		<staticlist listid="modules_videos/controlbar" label="&amp;modules.videos.bo.general.Control-bar;" description="&amp;modules.videos.bo.general.Control-bar;">
-			<staticitem label="&amp;modules.videos.bo.general.Video-bottom;" value="bottom" />
-			<staticitem label="&amp;modules.videos.bo.general.Video-over;" value="over" />
-			<staticitem label="&amp;modules.videos.bo.general.Video-none;" value="none" />
+		<staticlist listid="modules_videos/controlbar" label="m.videos.bo.general.control-bar" description="m.videos.bo.general.control-bar">
+			<staticitem label="m.videos.bo.general.video-bottom" value="bottom" />
+			<staticitem label="m.videos.bo.general.video-over" value="over" />
+			<staticitem label="m.videos.bo.general.video-none" value="none" />
 		</staticlist>
 	</systemfolder>
-	
 	<rootfolder module="preferences">
-		<videospreferences />
+		<videospreferences/>
 	</rootfolder>
 </script>

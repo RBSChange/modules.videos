@@ -78,7 +78,8 @@ class videos_DailymotionvideoService extends f_persistentdocument_DocumentServic
 		$dailyVideo['getWidth'] = $prefs->getDailyWidth();
 		$dailyVideo['getHeight'] = $prefs->getDailyHeight();
 				
-		$templateComponent = TemplateLoader::getInstance()->setpackagename('modules_videos')->setMimeContentType('html')->load('Videos-Block-Dailymotionvideo-Success');
+		$templateComponent = change_TemplateLoader::getNewInstance()->setExtension('html')
+			->load('modules', 'videos', 'templates', 'Videos-Block-Dailymotionvideo-Success');
 		$templateComponent->setAttribute('video', $dailyVideo);
 		$content = $templateComponent->execute();
 		return $content;

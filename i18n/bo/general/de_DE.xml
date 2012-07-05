@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.videos.bo.general" lcid="de_DE">
-  <key id="module-name">Videos</key>
-  <key id="tree-root-name">Videos</key>
-  <key id="system-folder-name">Videos</key>
-  <key id="false">NEIN</key>
-  <key id="true">JA</key>
-  <key id="none">zentrieren</key>
-  <key id="fit">bearbeiten</key>
-  <key id="technical-information">technische Informationen</key>
-  <key id="extra-information">Vorschau</key>
-  <key id="general">allgemein</key>
+	<key id="module-name">Videos</key>
+	<key id="tree-root-name">Videos</key>
+	<key id="system-folder-name">Videos</key>
+	<key id="false">NEIN</key>
+	<key id="true">JA</key>
+	<key id="none">zentrieren</key>
+	<key id="fit">bearbeiten</key>
+	<key id="technical-information">technische Informationen</key>
+	<key id="extra-information">Vorschau</key>
+	<key id="general">allgemein</key>
 </i18n>

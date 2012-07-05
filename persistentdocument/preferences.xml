@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document xmlns="http://www.rbs.fr/schema/change-document/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rbs.fr/schema/change-document/1.0 http://www.rbschange.fr/schema/persistentdocument-4.0.xsd" model-version="1.0" icon="videos" use-publication-dates="false" backoffice-indexable="false" has-url="false">
 	<properties>
-		<property name="label" default-value="preferences" />
-		<property name="videoWidth" type="String" min-occurs="1" default-value="320">
+		<property name="label" default-value="m.videos.bo.general.module-name" />
+		<property name="videoWidth" type="String" default-value="320" required="true">
 			<constraint name="integer" />
 		</property>
-		<property name="videoHeight" type="String" min-occurs="1" default-value="240">
+		<property name="videoHeight" type="String" default-value="240" required="true">
 			<constraint name="integer" />
 		</property>
-		<property name="autostart" type="String" min-occurs="1" from-list="modules_videos/truefalse" default-value="false" />
+		<property name="autostart" type="String" from-list="modules_videos/truefalse" default-value="false" required="true" />
 		<property name="repeat" type="Boolean" />
 		<!-- Colors -->
 		<property name="backcolor" type="String" />
@@ -18,14 +18,14 @@
 		<!-- Display appearance -->
 		<property name="logo" type="Document" document-type="modules_media/media" />
 		<property name="image" type="Document" document-type="modules_media/media" />
-		<property name="icons" type="String" min-occurs="1" from-list="modules_videos/truefalse" default-value="true" />
-		<property name="controlbar" type="String" min-occurs="1" from-list="modules_videos/controlbar" default-value="bottom" />
-		<property name="usefullscreen" type="String" min-occurs="1" from-list="modules_videos/truefalse" default-value="true" />
+		<property name="icons" type="String" from-list="modules_videos/truefalse" default-value="true" required="true" />
+		<property name="controlbar" type="String" from-list="modules_videos/controlbar" default-value="bottom" required="true" />
+		<property name="usefullscreen" type="String" from-list="modules_videos/truefalse" default-value="true" required="true" />
 		<!-- Dailymotion properties -->
-		<property name="dailyWidth" type="String" min-occurs="1" default-value="480">
+		<property name="dailyWidth" type="String" default-value="480" required="true">
 			<constraint name="integer" />
 		</property>
-		<property name="dailyHeight" type="String" min-occurs="1" default-value="414">
+		<property name="dailyHeight" type="String" default-value="414" required="true">
 			<constraint name="integer" />
 		</property>
 		<property name="background" type="String" default-value="#DEDEDE" />
@@ -34,10 +34,10 @@
 		<property name="special" type="String" default-value="#FFC300" />
 		<property name="dailyAutoPlay" type="Boolean" default-value="false" />
 		<!-- YouTube properties -->
-		<property name="youtubeWidth" type="String" min-occurs="1" default-value="480">
+		<property name="youtubeWidth" type="String" default-value="480" required="true">
 			<constraint name="integer" />
 		</property>
-		<property name="youtubeHeight" type="String" min-occurs="1" default-value="385">
+		<property name="youtubeHeight" type="String" default-value="385" required="true">
 			<constraint name="integer" />
 		</property>
 		<property name="color1" type="String" />

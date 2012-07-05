@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.videos.bo.blocks.video" lcid="de_DE">
-  <key id="videoWidth">Breite des Lesegeräts</key>
-  <key id="videoHeight">Höhe des Lesegeräts</key>
-  <key id="logo">Logo</key>
-  <key id="usefullscreen">Knopf ganzer Bildschirm</key>
-  <key id="autostart">Autostart</key>
-  <key id="repeat">Wiederholen</key>
+	<key id="videowidth">Breite des Lesegeräts</key>
+	<key id="videoheight">Höhe des Lesegeräts</key>
+	<key id="logo">Logo</key>
+	<key id="usefullscreen">Knopf ganzer Bildschirm</key>
+	<key id="autostart">Autostart</key>
+	<key id="repeat">Wiederholen</key>
 </i18n>

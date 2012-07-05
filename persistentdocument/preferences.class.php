@@ -6,25 +6,24 @@
 class videos_persistentdocument_preferences extends videos_persistentdocument_preferencesbase
 {
 	/**
-	 * @see f_persistentdocument_PersistentDocumentImpl::getLabel()
-	 *
 	 * @return string
 	 */
-	public function getLabel()
-	{
-		return f_Locale::translateUI(parent::getLabel());
-	}	
-	
 	public function getPlayerUrl()
 	{
 		return MediaHelper::getFrontofficeStaticPath('jwplayer.swf');
 	}
 	
+	/**
+	 * @return string
+	 */
 	public function getImageUrl()
 	{
 		return MediaHelper::getPublicFormatedUrl($this->getImage(), 'modules.videos.frontoffice/imagevideo');
 	}
-	
+
+	/**
+	 * @return string
+	 */
 	public function getLogoUrl()
 	{
 		return MediaHelper::getPublicFormatedUrl($this->getLogo(), 'modules.videos.frontoffice/logovideo');

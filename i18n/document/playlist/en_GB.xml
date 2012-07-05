@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.videos.document.playlist" lcid="en_GB">
-  <key id="edition-form-title">playlist properties</key>
-  <key id="label">label</key>
-  <key id="label-help">label-help</key>
-  <key id="video">videos</key>
-  <key id="position">list position</key>
-  <key id="startpublicationdate">start publication date</key>
-  <key id="startpublicationdate-help">start publication date</key>
-  <key id="endpublicationdate">end publication date</key>
-  <key id="endpublicationdate-help">end publication date</key>
+	<key id="edition-form-title">playlist properties</key>
+	<key id="label">label</key>
+	<key id="label-help">label-help</key>
+	<key id="video">videos</key>
+	<key id="position">list position</key>
+	<key id="startpublicationdate">start publication date</key>
+	<key id="startpublicationdate-help">start publication date</key>
+	<key id="endpublicationdate">end publication date</key>
+	<key id="endpublicationdate-help">end publication date</key>
 </i18n>

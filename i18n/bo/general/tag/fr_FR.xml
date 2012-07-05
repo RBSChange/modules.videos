@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.videos.bo.general.tag" lcid="fr_FR">
-  <key id="detail">page détail d'une vidéo</key>
+	<key id="detail">page détail d'une vidéo</key>
 </i18n>

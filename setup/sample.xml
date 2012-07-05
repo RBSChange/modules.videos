@@ -2,13 +2,11 @@
 <script>
 	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
 	<binding fileName="modules/videos/persistentdocument/import/videos_binding.xml" />
-
 	<rootfolder module="media">
 		<folder byLabel="Exemples de vidéos">
 			<media path="modules/videos/setup/sample/barsandtone.flv" byLabel="Video 1" id="mv1" />
 		</folder>
 	</rootfolder>
-
 	<rootfolder module="videos">
 		<folder byLabel="Exemples de vidéos">
 			<youtubevideo byVideoId="92cQ02ymk3E" label="RBS CHANGE, du propriétaire à l'Open Source" />
