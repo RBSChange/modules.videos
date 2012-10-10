@@ -47,5 +47,5 @@
 		<property name="youtubeAutoPlay" type="Boolean" default-value="false" />
 		<property name="dailymotionhighlight" type="String" default-value="#FFC300" />
 	</properties>
-	<statuses default="PUBLICATED" />
+	<statuses default="PUBLISHED" />
 </document>
