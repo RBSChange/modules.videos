@@ -19,8 +19,8 @@
 			<contextactions>
 				<contextaction name="edit" />
 				<contextaction name="openTreeNodeOrder" />
-				<contextaction name="createFolder" />
 				<groupactions name="create_">
+					<contextaction name="createFolder" />
 					<contextaction name="createPlaylist" />
 					<contextaction name="createVideo" />
 					<contextaction name="createDailymotionvideo" />
@@ -45,8 +45,8 @@
 				<contextaction name="edit" />
 				<contextaction name="delete" />
 				<contextaction name="openTreeNodeOrder" />
-				<contextaction name="createFolder" />
 				<groupactions name="create_">
+					<contextaction name="createFolder" />
 					<contextaction name="createPlaylist" />
 					<contextaction name="createVideo" />
 					<contextaction name="createDailymotionvideo" />
